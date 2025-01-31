@@ -277,8 +277,8 @@ a[data-role=button] {
 }
 
 .toast {
-    color: #ffffffe6;
-    background: #303030;
+    color: #ffffff;
+    background: #00b400cc;
 }
 
 @supports (backdrop-filter:blur(10px)) or (-webkit-backdrop-filter:blur(10px)) {
