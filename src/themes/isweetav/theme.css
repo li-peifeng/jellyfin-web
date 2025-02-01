@@ -88,11 +88,6 @@ progress::-webkit-progress-value {
     transition: 0.2s;
 }
 
-.fab:focus,
-.raised:focus {
-    background: #ff77f1;
-}
-
 div[data-role=controlgroup] .controlGroupButton.ui-btn-active,
 div[data-role=controlgroup] a.ui-btn-active {
     color: #000000 !important;
@@ -131,10 +126,6 @@ a[data-role=button] {
 .MuiButton-colorError:hover {
     background-color: #ff0000;
     box-shadow: 0 0 5px #ff0000;
-}
-
-.button-submit:focus {
-    background: #ff77f1;
 }
 
 .itemName {
@@ -419,15 +410,6 @@ a[data-role=button] {
     background: #00b400;
 }
 
-.mdl-radio.show-focus .mdl-radio__button:focus+.mdl-radio__circles svg .mdl-radio__outer-circle,
-.mdl-radio.show-focus .mdl-radio__button:focus+.mdl-radio__circles svg .mdl-radio__inner-circle {
-    color: #ff77f1;
-}
-
-.mdl-radio.show-focus .mdl-radio__button:focus+.mdl-radio__circles .mdl-radio__focus-circle {
-    background: #00a4dc;
-}
-
 .emby-tab-button {
     color: #ffffffe6;
     border-radius: 2em;
@@ -485,12 +467,6 @@ a[data-role=button] {
     background: #00000066 !important;
 }
 
-.guide-channelHeaderCell:focus,
-.programCell:focus {
-    color: #ffffff !important;
-    background-color: #48c3c8 !important;
-}
-
 .guide-programTextIcon {
     color: #bababa;
     background: #555555;
@@ -503,16 +479,6 @@ a[data-role=button] {
 .guide-date-tab-button {
     color: #555555;
     color: #ffffff4d;
-}
-
-.guide-date-tab-button.emby-tab-button-active,
-.guide-date-tab-button:focus {
-    color: #ff77f1;
-}
-
-.guide-date-tab-button.show-focus:focus {
-    color: #ffffff;
-    background-color: #48c3c8;
 }
 
 .infoBanner {
@@ -543,6 +509,11 @@ a[data-role=button] {
 .buttonActive:hover {
     color: #ff0000 !important;
     box-shadow: 0 0 10px #ffffff;
+}
+
+.textActionButton:hover {
+    box-shadow: 0 2px 0 #00ff00;
+    text-decoration: none;
 }
 
 .mediaButton {
@@ -984,10 +955,6 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .paper-icon-button-light:active:not(:disabled) {
     color: #ffffff;
     background-color: #ffffff80;
-}
-
-.paper-icon-button-light.show-focus:focus {
-    color: #ff77f1;
 }
 
 .headerUserButtonRound {
