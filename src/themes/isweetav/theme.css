@@ -1084,6 +1084,10 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     display: unset;
 }
 
+.selectArrow {
+    margin-top: 1.45em;
+}
+
 /* start 影片LOGO */
 .detailLogo {
     position: absolute;
