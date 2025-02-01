@@ -1189,8 +1189,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 
 /* 背景模糊 */
 .backdropImage {
-    -webkit-filter: blur(5px) saturate(110%) contrast(110%) brightness(100%);
-    filter: blur(5px) saturate(110%) contrast(110%) brightness(100%);
+    -webkit-filter: blur(5px) saturate(110%) contrast(110%) brightness(80%);
+    filter: blur(5px) saturate(110%) contrast(110%) brightness(80%);
 }
 
 .backgroundContainer.withBackdrop {
