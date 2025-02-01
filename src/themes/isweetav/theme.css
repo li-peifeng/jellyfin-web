@@ -1484,8 +1484,6 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .button-link:hover {
     -webkit-text-decoration: none;
     text-decoration: none;
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
     box-shadow: 0 2px 0 #ffffff;
 }
 
