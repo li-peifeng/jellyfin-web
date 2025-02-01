@@ -178,10 +178,10 @@ a[data-role=button] {
     border-radius: var(--rounding) !important;
     background-color: #0000004d;
     box-shadow: 0 0 10px #ffffff;
-    -webkit-backdrop-filter: blur(15px) !important;
-    -o-backdrop-filter: blur(15px) !important;
-    backdrop-filter: blur(15px) !important;
-    -moz-backdrop-filterss: blur (15px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    -o-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
+    -moz-backdrop-filterss: blur(10px) !important;
 }
 
 .dialog-fixedSize,
@@ -692,13 +692,6 @@ form {
     padding: 1em;
 }
 
-/* 影片详情页标题栏透明 */
-.detailRibbon {
-    background: #00000033;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
-
 /* 海报图文字上下间距微调 */
 .cardText-first {
     padding-top: 0.1em;
@@ -837,10 +830,10 @@ form {
 .nowPlayingContextMenu {
     border-radius: var(--rounding) !important;
     background-color: #ffffff1a;
-    -webkit-backdrop-filter: blur(15px) !important;
-    -o-backdrop-filter: blur(15px) !important;
-    backdrop-filter: blur(15px) !important;
-    -moz-backdrop-filterss: blur (15px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    -o-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
+    -moz-backdrop-filterss: blur(15px) !important;
 }
 
 /* 移动端音乐播放器 */
@@ -1171,10 +1164,10 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     -ms-transition: all 0.2s !important;
     -o-transition: all 0.2s !important;
     transition: all 0.2s !important;
-    -webkit-backdrop-filter: blur(15px);
-    -moz-backdrop-filter: blur(15px);
-    -o-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .upNextDialog {
@@ -1194,13 +1187,28 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     box-shadow: 0 0 5px #ffffff;
 }
 
+/* 背景模糊 */
 .backdropImage {
-    -webkit-filter: blur(5px) saturate(110%) contrast(110%) brightness(80%);
-    filter: blur(5px) saturate(110%) contrast(110%) brightness(80%);
+    -webkit-filter: blur(5px) saturate(110%) contrast(110%) brightness(100%);
+    filter: blur(5px) saturate(110%) contrast(110%) brightness(100%);
 }
 
 .backgroundContainer.withBackdrop {
     opacity: 0;
+}
+
+/* 影片详情页标题栏透明模糊 */
+.detailRibbon {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(10px) saturate(110%) contrast(110%) brightness(90%);
+    backdrop-filter: blur(10px) saturate(110%) contrast(110%) brightness(90%);
+}
+
+/* 影片详情页透明模糊 */
+.detailPageSecondaryContainer {
+    padding-top: 0em !important;
+    -webkit-backdrop-filter: blur(10px) saturate(110%) contrast(110%) brightness(80%);
+    backdrop-filter: blur(10px) saturate(110%) contrast(110%) brightness(80%);
 }
 
 /* 登录页面背景图 */
@@ -1442,10 +1450,6 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transition: 0.2s;
-}
-
-.detailPageSecondaryContainer {
-    padding-top: 0em !important;
 }
 
 .itemsContainer>.card>.cardBox {
