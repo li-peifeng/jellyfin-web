@@ -512,8 +512,9 @@ a[data-role=button] {
 }
 
 .textActionButton:hover {
-    box-shadow: 0 2px 0 #00ff00;
+    -webkit-text-decoration: none;
     text-decoration: none;
+    box-shadow: 0 2px 0 #ffffff;
 }
 
 .mediaButton {
@@ -1471,15 +1472,17 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 }
 
 .MuiLink-underlineAlways:hover {
-    -webkit-text-decoration: underline !important;
-    text-decoration: underline !important;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    box-shadow: 0 2px 0 #ffffff;
 }
 
 .button-link:hover {
-    -webkit-text-decoration: underline;
-    text-decoration: underline;
+    -webkit-text-decoration: none;
+    text-decoration: none;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
+    box-shadow: 0 2px 0 #ffffff;
 }
 
 @media (min-width:31.25em) {
