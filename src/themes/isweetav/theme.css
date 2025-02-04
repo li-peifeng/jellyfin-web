@@ -616,7 +616,7 @@ form {
 }
 
 .libraryPage:not(.noSecondaryNavPage) {
-    padding-top: 6em !important;
+    padding-top: 5em !important;
 }
 
 /* 删除“我的媒体”部分标题 */
@@ -1553,7 +1553,7 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 
 @media (min-width: 60em) {
     .libraryPage:not(.noSecondaryNavPage) {
-        padding-top: 6.5em !important;
+        padding-top: 6em !important;
     }
 
     .emby-tab-button {
