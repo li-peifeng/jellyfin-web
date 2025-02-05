@@ -13,11 +13,6 @@
     padding-left: 0.3em;
 }
 
-html,
-body {
-    overscroll-behavior-y: none;
-}
-
 .skinHeader {
     transition: transform 0.5s ease-in-out !important;
 }

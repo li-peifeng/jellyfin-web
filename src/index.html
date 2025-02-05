@@ -318,28 +318,69 @@
         })();
     </script>
     <script defer="defer">
-        const observer = new MutationObserver(() => {
-            const header = document.querySelector(".skinHeader");
-            if (header) {
-                observer.disconnect();
-                addScrollListener(header);
-            }
-        });
-        observer.observe(document.documentElement, { childList: true, subtree: true });
+        function getScrollTop() {
+            return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        }
+
+        function throttle(func, limit) {
+            let inThrottle;
+            return function () {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
+        if (typeof MutationObserver !== "undefined") {
+            const observer = new MutationObserver(() => {
+                const header = document.querySelector(".skinHeader");
+                if (header) {
+                    observer.disconnect();
+                    addScrollListener(header);
+                }
+            });
+            observer.observe(document.documentElement, { childList: true, subtree: true });
+        } else {
+
+            const checkHeaderInterval = setInterval(() => {
+                const header = document.querySelector(".skinHeader");
+                if (header) {
+                    clearInterval(checkHeaderInterval);
+                    addScrollListener(header);
+                }
+            }, 100);
+        }
+
         function addScrollListener(header) {
             let lastScrollTop = 0;
             const threshold = 10;
-            window.addEventListener("scroll", function () {
-                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            const handleScroll = throttle(() => {
+                const currentScroll = getScrollTop();
+                if (currentScroll < 0 || currentScroll > document.documentElement.scrollHeight - window.innerHeight) {
+                    return;
+                }
                 if (Math.abs(currentScroll - lastScrollTop) >= threshold) {
                     if (currentScroll > lastScrollTop) {
-                        header.classList.add("hidden");
+                        if (header.classList) {
+                            header.classList.add("hidden");
+                        } else {
+                            header.className += " hidden";
+                        }
                     } else {
-                        header.classList.remove("hidden");
+                        if (header.classList) {
+                            header.classList.remove("hidden");
+                        } else {
+                            header.className = header.className.replace(" hidden", "");
+                        }
                     }
+                    lastScrollTop = currentScroll;
                 }
-                lastScrollTop = currentScroll;
-            });
+            }, 100);
+            window.addEventListener("scroll", handleScroll);
         }
     </script>
 </head>
