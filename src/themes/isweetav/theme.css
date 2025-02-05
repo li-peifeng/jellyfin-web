@@ -13,6 +13,14 @@
     padding-left: 0.3em;
 }
 
+.skinHeader {
+    transition: transform 0.5s ease-in-out !important;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
 .skinHeader,
 html {
     color: #ffffff;

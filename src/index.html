@@ -317,6 +317,31 @@
             }
         })();
     </script>
+    <script defer="defer">
+        const observer = new MutationObserver(() => {
+            const header = document.querySelector(".skinHeader");
+            if (header) {
+                observer.disconnect();
+                addScrollListener(header);
+            }
+        });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+        function addScrollListener(header) {
+            let lastScrollTop = 0;
+            const threshold = 10;
+            window.addEventListener("scroll", function () {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (Math.abs(currentScroll - lastScrollTop) >= threshold) {
+                    if (currentScroll > lastScrollTop) {
+                        header.classList.add("hidden");
+                    } else {
+                        header.classList.remove("hidden");
+                    }
+                }
+                lastScrollTop = currentScroll;
+            });
+        }
+    </script>
 </head>
 
 <body dir="ltr">
