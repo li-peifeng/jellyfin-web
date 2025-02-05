@@ -1638,7 +1638,7 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 
 @media all and (min-width: 100em) {
     .headerTabs {
-        margin-top: -4.5em;
+        margin-top: -4em;
     }
 
     .pageWithAbsoluteTabs:not(.noSecondaryNavPage) {
