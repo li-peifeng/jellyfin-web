@@ -338,6 +338,12 @@ a[data-role=button] {
     box-shadow: 0 0 10px #ffffff;
 }
 
+.listItem-border.emby-button:hover {
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}
+
 .actionSheetMenuItem {
     color: #ffffff;
 }
@@ -779,7 +785,7 @@ form {
 #btnShutdown,
 #btnResetPassword {
     color: #ffffff !important;
-    background: #ff00004d !important;
+    background: #00000080 !important;
 }
 
 #btnDeleteImage:hover,
@@ -1302,8 +1308,6 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 }
 
 /* 后台左侧面板鼠标hover */
-.MuiListItemButton-root:hover,
-.MuiListItemButton-gutters:hover,
 .MuiListItemButton-root:hover,
 .MuiListItemButton-gutters:hover {
     margin: 0 0.6em;
