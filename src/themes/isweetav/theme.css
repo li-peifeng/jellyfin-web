@@ -329,9 +329,13 @@ a[data-role=button] {
     background: #ffffff;
 }
 
-.listItem:hover {
+.listItem.listItem-largeImage.listItem-withContentWrapper:hover {
+    box-shadow: 0 0 2px #ffffff;
+
+}
+
+.listItem.listItem-border:hover {
     box-shadow: 0 0 10px #ffffff;
-    background-color: #00000033;
 }
 
 .actionSheetMenuItem {
