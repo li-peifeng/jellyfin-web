@@ -1482,7 +1482,11 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 }
 
 .MuiTableRow-head {
-    background-color: #00000000 !important;
+    background-color: #000000 !important;
+}
+
+.MuiTableCell-root.MuiTableCell-body.MuiTableCell-alignLeft.MuiTableCell-sizeMedium {
+    min-width: max(calc(var(--col-mrt_row_actions-size) * 1px), 120px);
 }
 
 /* 日志背景 */
@@ -1558,6 +1562,10 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     .portraitCard,
     .squareCard {
         width: 25%;
+    }
+
+    .editPageInnerContent {
+        width: 70%;
     }
 }
 
