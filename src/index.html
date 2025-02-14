@@ -345,7 +345,6 @@
             });
             observer.observe(document.documentElement, { childList: true, subtree: true });
         } else {
-
             const checkHeaderInterval = setInterval(() => {
                 const header = document.querySelector(".skinHeader");
                 if (header) {
@@ -362,6 +361,14 @@
                 const currentScroll = getScrollTop();
                 if (currentScroll < 0 || currentScroll > document.documentElement.scrollHeight - window.innerHeight) {
                     return;
+                }
+                if (currentScroll === 0) {
+                    if (header.classList) {
+                        header.classList.remove("hidden");
+                    } else {
+                        header.className = header.className.replace(" hidden", "");
+                    }
+                    lastScrollTop = 0;
                 }
                 if (Math.abs(currentScroll - lastScrollTop) >= threshold) {
                     if (currentScroll > lastScrollTop) {
