@@ -431,12 +431,13 @@ a[data-role=button] {
     border-radius: 2em;
     line-height: 2em;
     margin: 1em 0.6em;
-    min-width: 5em;
+    min-width: 6em;
     padding: 0em 0em;
     box-shadow: 0 0 5px #ffffff;
 }
 
 .emby-tab-button-active {
+    min-width: 8em;
     color: #000000 !important;
     background-color: #ffffff;
     box-shadow: 0 0 5px #ffffff;
@@ -449,6 +450,7 @@ a[data-role=button] {
 }
 
 .emby-tab-button:hover {
+    min-width: 8em;
     color: #000000 !important;
     background-color: #ffffff;
     box-shadow: 0 0 5px #ffffff;
