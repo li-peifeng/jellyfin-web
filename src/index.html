@@ -356,7 +356,7 @@
 
         function addScrollListener(header) {
             let lastScrollTop = 0;
-            const threshold = 10;
+            const threshold = 5;
             const handleScroll = throttle(() => {
                 const currentScroll = getScrollTop();
                 if (currentScroll < 0 || currentScroll > document.documentElement.scrollHeight - window.innerHeight) {
@@ -386,7 +386,7 @@
                     }
                     lastScrollTop = currentScroll;
                 }
-            }, 100);
+            }, 50);
             window.addEventListener("scroll", handleScroll);
         }
     </script>
