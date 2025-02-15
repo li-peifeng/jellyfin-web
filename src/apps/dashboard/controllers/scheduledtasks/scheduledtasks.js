@@ -98,7 +98,7 @@ function getTaskProgressHtml(task) {
         html += '<div class="taskProgressInner" style="width:' + progress + '%;">';
         html += '</div>';
         html += '</div>';
-        html += "<span style='color:#00a4dc;margin-left:5px;'>" + progress + '%</span>';
+        html += "<span style='color:#fff;margin-left:5px;'>" + progress + '%</span>';
         html += '</div>';
     } else {
         html += "<span style='color:#FF0000;'>" + globalize.translate('LabelStopping') + '</span>';
