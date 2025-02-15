@@ -382,7 +382,7 @@ function renderRunningTasks(view, tasks) {
             html += '<progress max="100" value="' + progress + '" title="' + progress + '%">';
             html += progress + '%';
             html += '</progress>';
-            html += "<span style='color:#00a4dc;margin-left:5px;margin-right:5px;'>" + progress + '%</span>';
+            html += "<span style='color:#fff;margin-left:5px;margin-right:5px;'>" + progress + '%</span>';
             html += '<button type="button" is="paper-icon-button-light" title="' + globalize.translate('ButtonStop') + '" onclick="DashboardPage.stopTask(this, \'' + task.Id + '\');" class="autoSize"><span class="material-icons cancel" aria-hidden="true"></span></button>';
         } else if (task.State === 'Cancelling') {
             html += '<span style="color:#cc0000;">' + globalize.translate('LabelStopping') + '</span>';

@@ -64,19 +64,43 @@ h3 {
 }
 
 progress {
+    appearance: none;
+    margin: 0;
+    background: #ffffff !important;
     border-radius: 0.5em;
+    border: none;
 }
 
 progress::-webkit-progress-bar {
+    background: #ffffff !important;
     border-radius: 0.5em;
 }
 
 progress::-moz-progress-bar {
+    background-color: #00a4dc !important;
     border-radius: 0.5em;
 }
 
 progress::-webkit-progress-value {
+    background-color: #00a4dc !important;
     border-radius: 0.5em;
+}
+
+progress[aria-valuenow]::before {
+    border-radius: 0.5em;
+    background-color: #00a4dc !important;
+}
+
+.taskProgressOuter {
+    height: 6px;
+    background: #ffffff;
+    border-radius: 0.5em;
+}
+
+.taskProgressInner {
+    border-radius: 0.5em;
+    height: 100%;
+    background: #00a4dc;
 }
 
 .MuiAlert-icon {
