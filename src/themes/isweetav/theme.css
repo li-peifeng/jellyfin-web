@@ -79,12 +79,6 @@ progress::-webkit-progress-value {
     border-radius: 0.5em;
 }
 
-.fab,
-.raised {
-    border-radius: var(--rounding);
-    background: #00000080;
-}
-
 .MuiAlert-icon {
     color: #ffff00 !important;
     margin-left: 0.5em;
@@ -750,7 +744,9 @@ form {
 .button-submit,
 .viewTabButton,
 .button-alt,
-.btnOption {
+.btnOption,
+.fab,
+.raised {
     border-radius: var(--rounding);
     background: #13dae0bf;
 }
@@ -1289,7 +1285,7 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .MuiIconButton-root,
 .MuiIconButton-colorInherit,
 .MuiIconButton-sizeLarge {
-    margin: 0 0.6em;
+    margin: 0 0.2em;
     border-radius: var(--rounding);
     box-shadow: 0 0 5px #ffffff;
 }
@@ -1299,7 +1295,7 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .MuiIconButton-sizeLarge:hover {
     background-color: #ffffff !important;
     color: #000000;
-    box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0 5px #ffffff;
 }
 
 .MuiListItemButton-root,
@@ -1672,6 +1668,12 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 @media all and (max-width: 100em) {
     .withSectionTabs .headerTop {
         padding-bottom: 0em !important;
+    }
+}
+
+@media (min-width: 112.5em) {
+    .editPageInnerContent {
+        width: 75%
     }
 }
 
