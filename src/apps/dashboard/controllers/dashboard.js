@@ -739,6 +739,7 @@ const DashboardPage = {
         });
     }
 };
+window.DashboardPage = DashboardPage;
 
 export default function (view) {
     function onRestartRequired(evt, apiClient) {
@@ -853,4 +854,3 @@ export default function (view) {
         }
     });
 }
-
