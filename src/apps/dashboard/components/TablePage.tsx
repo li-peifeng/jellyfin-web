@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box/Box';
-import Stack from '@mui/material/Stack/Stack';
 import Typography from '@mui/material/Typography/Typography';
 import { type MRT_RowData, type MRT_TableInstance, MaterialReactTable } from 'material-react-table';
 import React from 'react';
@@ -8,7 +7,6 @@ import Page, { type PageProps } from 'components/Page';
 
 interface TablePageProps<T extends MRT_RowData> extends PageProps {
     title: string
-    subtitle?: string
     table: MRT_TableInstance<T>
 }
 
@@ -29,7 +27,6 @@ export const DEFAULT_TABLE_OPTIONS = {
 
 const TablePage = <T extends MRT_RowData>({
     title,
-    subtitle,
     table,
     children,
     ...pageProps
@@ -47,8 +44,7 @@ const TablePage = <T extends MRT_RowData>({
                     height: '100%'
                 }}
             >
-                <Stack
-                    spacing={2}
+                <Box
                     sx={{
                         marginBottom: 1
                     }}
@@ -56,12 +52,7 @@ const TablePage = <T extends MRT_RowData>({
                     <Typography variant='h2'>
                         {title}
                     </Typography>
-                    {subtitle && (
-                        <Typography>
-                            {subtitle}
-                        </Typography>
-                    )}
-                </Stack>
+                </Box>
                 <MaterialReactTable table={table} />
             </Box>
             {children}

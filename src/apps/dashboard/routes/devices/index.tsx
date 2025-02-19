@@ -5,12 +5,10 @@ import Box from '@mui/material/Box/Box';
 import Button from '@mui/material/Button/Button';
 import IconButton from '@mui/material/IconButton/IconButton';
 import Tooltip from '@mui/material/Tooltip/Tooltip';
-import parseISO from 'date-fns/parseISO';
 import { type MRT_ColumnDef, useMaterialReactTable } from 'material-react-table';
 import React, { useCallback, useMemo, useState } from 'react';
 
-import DateTimeCell from 'apps/dashboard/components/table/DateTimeCell';
-import TablePage, { DEFAULT_TABLE_OPTIONS } from 'apps/dashboard/components/table/TablePage';
+import TablePage, { DEFAULT_TABLE_OPTIONS } from 'apps/dashboard/components/TablePage';
 import UserAvatarButton from 'apps/dashboard/components/UserAvatarButton';
 import { useDeleteDevice } from 'apps/dashboard/features/devices/api/useDeleteDevice';
 import { useDevices } from 'apps/dashboard/features/devices/api/useDevices';
@@ -21,6 +19,7 @@ import ConfirmDialog from 'components/ConfirmDialog';
 import { useApi } from 'hooks/useApi';
 import { type UsersRecords, useUsersDetails } from 'hooks/useUsers';
 import globalize from 'lib/globalize';
+import { parseISO8601Date, toLocaleString } from 'scripts/datetime';
 
 const getUserCell = (users: UsersRecords) => function UserCell({ renderedCellValue, row }: DeviceInfoCell) {
     return (
@@ -36,10 +35,7 @@ const getUserCell = (users: UsersRecords) => function UserCell({ renderedCellVal
 
 export const Component = () => {
     const { api } = useApi();
-    const { data, isLoading: isDevicesLoading, isRefetching } = useDevices({});
-    const devices = useMemo(() => (
-        data?.Items || []
-    ), [ data ]);
+    const { data: devices, isLoading: isDevicesLoading } = useDevices({});
     const { usersById: users, names: userNames, isLoading: isUsersLoading } = useUsersDetails();
 
     const [ isDeleteConfirmOpen, setIsDeleteConfirmOpen ] = useState(false);
@@ -81,32 +77,29 @@ export const Component = () => {
     }, []);
 
     const onConfirmDeleteAll = useCallback(() => {
-        if (devices) {
+        if (devices?.Items) {
             Promise
-                .all(devices.map(item => {
+                .all(devices.Items.map(item => {
                     if (api && item.Id && api.deviceInfo.id === item.Id) {
                         return deleteDevice.mutateAsync({ id: item.Id });
                     }
                     return Promise.resolve();
                 }))
-                .catch(err => {
-                    console.error('[DevicesPage] failed deleting all devices', err);
-                })
                 .finally(() => {
                     onCloseDeleteAllConfirmDialog();
                 });
         }
-    }, [ api, deleteDevice, devices, onCloseDeleteAllConfirmDialog ]);
+    }, [ api, deleteDevice, devices?.Items, onCloseDeleteAllConfirmDialog ]);
 
     const UserCell = getUserCell(users);
 
     const columns = useMemo<MRT_ColumnDef<DeviceInfoDto>[]>(() => [
         {
             id: 'DateLastActivity',
-            accessorFn: row => row.DateLastActivity ? parseISO(row.DateLastActivity) : undefined,
-            header: globalize.translate('LastActive'),
+            accessorFn: row => parseISO8601Date(row.DateLastActivity),
+            header: globalize.translate('LabelTime'),
             size: 160,
-            Cell: DateTimeCell,
+            Cell: ({ cell }) => toLocaleString(cell.getValue<Date>()),
             filterVariant: 'datetime-range',
             enableEditing: false
         },
@@ -141,7 +134,7 @@ export const Component = () => {
         ...DEFAULT_TABLE_OPTIONS,
 
         columns,
-        data: devices,
+        data: devices?.Items || [],
 
         // State
         initialState: {
@@ -154,9 +147,6 @@ export const Component = () => {
         state: {
             isLoading
         },
-
-        // Do not reset the page index when refetching data
-        autoResetPageIndex: !isRefetching,
 
         // Editing device name
         enableEditing: true,
@@ -182,11 +172,6 @@ export const Component = () => {
         // Custom actions
         enableRowActions: true,
         positionActionsColumn: 'last',
-        displayColumnDefOptions: {
-            'mrt-row-actions': {
-                header: ''
-            }
-        },
         renderRowActions: ({ row, table }) => {
             const isDeletable = api && row.original.Id && api.deviceInfo.id === row.original.Id;
             return (
