@@ -1,4 +1,5 @@
-<div id="dashboardPage" data-role="page" class="page type-interior dashboardHomePage fullWidthContent" data-title="${TabDashboard}">
+<div id="dashboardPage" data-role="page" class="page type-interior dashboardHomePage fullWidthContent"
+    data-title="${TabDashboard}">
     <div class="content-primary">
         <div class="dashboardSections" style="padding-top:.5em;">
             <div class="dashboardColumn dashboardColumn-2-60 dashboardColumn-3-46">
@@ -23,10 +24,12 @@
                         <button is="emby-button" type="button" class="raised btnRefresh">
                             <span>${ButtonScanAllLibraries}</span>
                         </button>
-                        <button is="emby-button" type="button" id="btnRestartServer" class="raised" onclick="DashboardPage.restart(this);">
+                        <button is="emby-button" type="button" id="btnRestartServer" class="raised"
+                            onclick="DashboardPage.restart(this);">
                             <span>${Restart}</span>
                         </button>
-                        <button is="emby-button" type="button" id="btnShutdown" class="raised" onclick="DashboardPage.shutdown(this);">
+                        <button is="emby-button" type="button" id="btnShutdown" class="raised"
+                            onclick="DashboardPage.shutdown(this);">
                             <span>${ButtonShutdown}</span>
                         </button>
                     </div>
@@ -50,7 +53,8 @@
 
             <div class="dashboardColumn dashboardColumn-2-40 dashboardColumn-3-27">
                 <div class="dashboardSection">
-                    <a is="emby-linkbutton" href="#/dashboard/activity?useractivity=true" class="button-flat sectionTitleTextButton">
+                    <a is="emby-linkbutton" href="#/dashboard/activity?useractivity=true"
+                        class="button-flat sectionTitleTextButton">
                         <h3>${HeaderActivity}</h3>
                         <span class="material-icons chevron_right" aria-hidden="true"></span>
                     </a>
@@ -67,7 +71,8 @@
                 </div>
 
                 <div class="dashboardSection serverActivitySection hide activityContainer">
-                    <a is="emby-linkbutton" href="#/dashboard/activity?useractivity=false" class="button-flat sectionTitleTextButton">
+                    <a is="emby-linkbutton" href="#/dashboard/activity?useractivity=false"
+                        class="button-flat sectionTitleTextButton">
                         <h3>${Alerts}</h3>
                         <span class="material-icons chevron_right" aria-hidden="true"></span>
                     </a>
@@ -96,13 +101,15 @@
                         <div class="listItem listItem-border">
                             <div class="listItemBody two-line">
                                 <div class="listItemBodyText secondary" style="margin:0;">${LabelMetadata}</div>
-                                <div class="listItemBodyText" id="metadataPath" dir="ltr" style="text-align: left;"></div>
+                                <div class="listItemBodyText" id="metadataPath" dir="ltr" style="text-align: left;">
+                                </div>
                             </div>
                         </div>
                         <div class="listItem listItem-border">
                             <div class="listItemBody two-line">
                                 <div class="listItemBodyText secondary" style="margin:0;">${LabelTranscodes}</div>
-                                <div class="listItemBodyText" id="transcodePath" dir="ltr" style="text-align: left;"></div>
+                                <div class="listItemBodyText" id="transcodePath" dir="ltr" style="text-align: left;">
+                                </div>
                             </div>
                         </div>
                         <div class="listItem listItem-border">
@@ -119,7 +126,7 @@
         <div class="dashboardFooter">
             <div style="height:1px;" class="ui-bar-inherit"></div>
             <div style="margin-top:1em;">
-                <a is="emby-linkbutton" rel="noopener noreferrer" class="button-link" href="https://jellyfin.org" target="_blank">Jellyfin</a>
+                <a is="emby-linkbutton" rel="noopener noreferrer" class="button-link" href="https://peifeng.li" target="_blank">iSweeTav</a>
             </div>
         </div>
     </div>

@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html class="preload" dir="ltr">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <link rel="manifest" href="manifest.json">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta http-equiv="X-UA-Compatibility" content="IE=Edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Jellyfin">
+    <meta name="application-name" content="iSweeTav">
     <meta name="robots" content="noindex, nofollow, noarchive">
     <meta name="referrer" content="no-referrer">
-
-    <meta id="themeColor" name="theme-color" content="#202020">
-
+    <meta name="theme-color" content="#5033cc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#3f2266" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" sizes="180x180" href="touchicon.png">
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="msapplication-TileImage" content="touchicon144.png">
     <meta name="msapplication-TileColor" content="#333333">
 
-    <title>Jellyfin</title>
+    <title>iSweeTav</title>
 
     <style>
         .transparentDocument,
@@ -54,7 +55,13 @@
         }
 
         .preload {
-            background-color: #101010;
+            background-color: #5033cc;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .preload {
+                background-color: #3f2266;
+            }
         }
 
         .hide,
@@ -105,17 +112,290 @@
             transform: translate(-50%, -50%);
         }
 
-        @media screen
-            and (min-device-width: 992px) {
+        @media screen and (min-device-width: 992px) {
             .splashLogo {
                 background-image: url(assets/img/banner-light.png);
             }
         }
     </style>
+    <script defer="defer">
+        (function () {
+            'use strict';
+            let observer
+            let root
+            function init() {
+                observer?.disconnect();
+                root?.unmount();
+                let app;
+                const targetNode = document.querySelector(".mainAnimatedPages");
+                const config = { attributes: false, childList: true, subtree: true };
+                const callback = (mutationsList, observer) => {
+                    if (document.querySelector("#castCollapsible")) {
+                        observer?.disconnect();
+                        try {
+                            loadPlayer()
+                        } catch (error) {
+                            observer.observe(targetNode, config);
+                            console.log(error);
+                        }
+                    }
+                };
+                observer = new MutationObserver(callback);
+                observer.observe(targetNode, config);
+            }
+            window.addEventListener("viewshow", (event) => {
+                init();
+            });
+
+            function loadPlayer() {
+                let isweetavplayer = document.querySelectorAll("div#itemDetailPage:not(.hide) #Infuse")[0];
+                if (!isweetavplayer) {
+                    let mainDetailButtons = document.querySelectorAll("div#itemDetailPage:not(.hide) .detailPageContent")[0];
+                    if (mainDetailButtons) {
+                        let buttonhtml = `<div style="display:flex;flex-wrap:wrap;justify-content: center;">
+        <a id="Infuse" type="button" class="button-flat btnPlay-infuse detailButton emby-button" title="使用 Infuse 播放视频"><div class="detailButton-content"><span class="material-icons detailButton-icon icon-infuse"></span></div></a>
+        <a id="NPlayer" type="button" class="button-flat btnPlay-nplayer detailButton emby-button" title="使用 NPlayer 播放视频"><div class="detailButton-content"><span class="material-icons detailButton-icon icon-NPlayer"></span></div></a>
+        <a id="Vlc" type="button" class="button-flat btnPlay-vlc detailButton emby-button" title="使用 VLC 播放视频"><div class="detailButton-content"><span class="material-icons detailButton-icon icon-VLC"></span></div></a>
+    </div>
+    `
+                        mainDetailButtons.insertAdjacentHTML('afterbegin', buttonhtml)
+                        document.querySelector("div#itemDetailPage:not(.hide) #NPlayer").onclick = NPlayer;
+                        document.querySelector("div#itemDetailPage:not(.hide) #Vlc").onclick = Vlc;
+                        document.querySelector("div#itemDetailPage:not(.hide) #Infuse").onclick = Infuse;
+                        document.querySelector("div#itemDetailPage:not(.hide) .icon-VLC").style.cssText += 'background: url(./assets/img/VLC.webp)no-repeat;background-size: 100% 100%';
+                        document.querySelector("div#itemDetailPage:not(.hide) .icon-NPlayer").style.cssText += 'background: url(./assets/img/NPlayer.webp)no-repeat;background-size: 100% 100%';
+                        document.querySelector("div#itemDetailPage:not(.hide) .icon-infuse").style.cssText += 'background: url(./assets/img/infuse.webp)no-repeat;background-size: 100% 100%';
+                    }
+                }
+            }
+
+            async function getItemInfo() {
+                let userId = ApiClient._serverInfo.UserId;
+                let itemId = /\?id=(\w*)/.exec(window.location.hash)[1];
+                let response = await ApiClient.getItem(userId, itemId);
+                if (response.Type == "Series") {
+                    let seriesNextUpItems = await ApiClient.getNextUpEpisodes({ SeriesId: itemId, UserId: userId });
+                    console.log("nextUpItemId: " + seriesNextUpItems.Items[0].Id);
+                    return await ApiClient.getItem(userId, seriesNextUpItems.Items[0].Id);
+                }
+                if (response.Type == "Season") {
+                    let seasonItems = await ApiClient.getItems(userId, { parentId: itemId });
+                    console.log("seasonItemId: " + seasonItems.Items[0].Id);
+                    return await ApiClient.getItem(userId, seasonItems.Items[0].Id);
+                }
+                console.log("itemId:  " + itemId);
+                return response;
+            }
+
+            function getSeek(position) {
+                let ticks = position * 10000;
+                let parts = []
+                    , hours = ticks / 36e9;
+                (hours = Math.floor(hours)) && parts.push(hours);
+                let minutes = (ticks -= 36e9 * hours) / 6e8;
+                ticks -= 6e8 * (minutes = Math.floor(minutes)),
+                    minutes < 10 && hours && (minutes = "0" + minutes),
+                    parts.push(minutes);
+                let seconds = ticks / 1e7;
+                return (seconds = Math.floor(seconds)) < 10 && (seconds = "0" + seconds),
+                    parts.push(seconds),
+                    parts.join(":")
+            }
+
+            function getSubPath(mediaSource) {
+                let selectSubtitles = document.querySelector("select[is='emby-select']:not(.hide).selectSubtitles");
+                let subTitlePath = '';
+                if (selectSubtitles && selectSubtitles.value > 0) {
+                    let SubIndex = mediaSource.MediaStreams.findIndex(m => m.Index == selectSubtitles.value && m.IsExternal);
+                    if (SubIndex > -1) {
+                        let subtitleCodec = mediaSource.MediaStreams[SubIndex].Codec;
+                        subTitlePath = `/${mediaSource.Id}/Subtitles/${selectSubtitles.value}/Stream.${subtitleCodec}`;
+                    }
+                }
+                else {
+                    let chiSubIndex = mediaSource.MediaStreams.findIndex(m => m.Language == "chi" && m.IsExternal);
+                    if (chiSubIndex > -1) {
+                        let subtitleCodec = mediaSource.MediaStreams[chiSubIndex].Codec;
+                        subTitlePath = `/${mediaSource.Id}/Subtitles/${chiSubIndex}/Stream.${subtitleCodec}`;
+                    } else {
+                        let externalSubIndex = mediaSource.MediaStreams.findIndex(m => m.IsExternal);
+                        if (externalSubIndex > -1) {
+                            let subtitleCodec = mediaSource.MediaStreams[externalSubIndex].Codec;
+                            subTitlePath = `/${mediaSource.Id}/Subtitles/${externalSubIndex}/Stream.${subtitleCodec}`;
+                        }
+                    }
+                }
+                return subTitlePath;
+            }
+
+            async function getEmbyMediaInfo() {
+                let itemInfo = await getItemInfo();
+                let mediaSourceId = itemInfo.MediaSources[0].Id;
+                let selectSource = document.querySelector("select[is='emby-select']:not(.hide).selectSource");
+                if (selectSource && selectSource.value.length > 0) {
+                    mediaSourceId = selectSource.value;
+                }
+                let mediaSource = itemInfo.MediaSources.find(m => m.Id == mediaSourceId);
+                let domain = `${ApiClient._serverAddress}/emby/videos/${itemInfo.Id}`;
+                let subPath = getSubPath(mediaSource);
+                let subUrl = subPath.length > 0 ? `${domain}${subPath}?api_key=${ApiClient.accessToken()}` : '';
+                let streamUrl = `${domain}/stream.${mediaSource.Container}?api_key=${ApiClient.accessToken()}&Static=true&MediaSourceId=${mediaSourceId}`;
+                let position = parseInt(itemInfo.UserData.PlaybackPositionTicks / 10000);
+                let intent = await getIntent(mediaSource, position);
+                console.log(streamUrl, subUrl, intent);
+                return {
+                    streamUrl: streamUrl,
+                    subUrl: subUrl,
+                    intent: intent,
+                }
+            }
+
+            async function getIntent(mediaSource, position) {
+                let title = mediaSource.Path.split('/').pop();
+                let externalSubs = mediaSource.MediaStreams.filter(m => m.IsExternal == true);
+                let subs = '';
+                let subs_name = '';
+                let subs_filename = '';
+                let subs_enable = '';
+                if (externalSubs) {
+                    subs_name = externalSubs.map(s => s.DisplayTitle);
+                    subs_filename = externalSubs.map(s => s.Path.split('/').pop());
+                }
+                return {
+                    title: title,
+                    position: position,
+                    subs: subs,
+                    subs_name: subs_name,
+                    subs_filename: subs_filename,
+                    subs_enable: subs_enable
+                };
+            }
+
+            async function Vlc() {
+                let mediaInfo = await getEmbyMediaInfo();
+                let intent = mediaInfo.intent;
+                let vlcUrl = `intent:${encodeURI(mediaInfo.streamUrl)}#Intent;package=org.videolan.vlc;type=video/*;S.subtitles_location=${encodeURI(mediaInfo.subUrl)};S.title=${encodeURI(intent.title)};i.position=${intent.position};end`;
+                if (getOS() == "windows") {
+                    vlcUrl = `vlc://${encodeURI(mediaInfo.streamUrl)}`;
+                }
+                if (getOS() == 'ios') {
+                    vlcUrl = `vlc-x-callback://x-callback-url/stream?url=${encodeURIComponent(mediaInfo.streamUrl)}&sub=${encodeURIComponent(mediaInfo.subUrl)}`;
+                }
+                console.log(vlcUrl);
+                location.href = vlcUrl
+            }
+
+            async function NPlayer() {
+                let mediaInfo = await getEmbyMediaInfo();
+                let nUrl = getOS() == 'macOS' ? `nplayer-mac://weblink?url=${encodeURIComponent(mediaInfo.streamUrl)}&new_window=1` : `nplayer-${encodeURI(mediaInfo.streamUrl)}`;
+                console.log(nUrl);
+                location.href = nUrl
+            }
+
+            async function Infuse() {
+                let mediaInfo = await getEmbyMediaInfo();
+                let infuseUrl = `infuse://x-callback-url/play?url=${encodeURIComponent(mediaInfo.streamUrl)}`;
+                console.log(`infuseUrl= ${infuseUrl}`);
+                location.href = infuseUrl
+            }
+
+            function getOS() {
+                let u = navigator.userAgent
+                if (!!u.match(/compatible/i) || u.match(/Windows/i)) {
+                    return 'windows'
+                } else if (!!u.match(/Macintosh/i) || u.match(/MacIntel/i)) {
+                    return 'macOS'
+                } else if (!!u.match(/iphone/i) || u.match(/Ipad/i)) {
+                    return 'ios'
+                } else if (u.match(/android/i)) {
+                    return 'android'
+                } else if (u.match(/Ubuntu/i)) {
+                    return 'Ubuntu'
+                } else {
+                    return 'other'
+                }
+            }
+        })();
+    </script>
+    <script defer="defer">
+        function getScrollTop() {
+            return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        }
+
+        function throttle(func, limit) {
+            let inThrottle;
+            return function () {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
+        if (typeof MutationObserver !== "undefined") {
+            const observer = new MutationObserver(() => {
+                const header = document.querySelector(".skinHeader");
+                if (header) {
+                    observer.disconnect();
+                    addScrollListener(header);
+                }
+            });
+            observer.observe(document.documentElement, { childList: true, subtree: true });
+        } else {
+            const checkHeaderInterval = setInterval(() => {
+                const header = document.querySelector(".skinHeader");
+                if (header) {
+                    clearInterval(checkHeaderInterval);
+                    addScrollListener(header);
+                }
+            }, 100);
+        }
+
+        function addScrollListener(header) {
+            let lastScrollTop = 0;
+            const threshold = 5;
+            const handleScroll = throttle(() => {
+                const currentScroll = getScrollTop();
+                if (currentScroll < 0 || currentScroll > document.documentElement.scrollHeight - window.innerHeight) {
+                    return;
+                }
+                if (currentScroll === 0) {
+                    if (header.classList) {
+                        header.classList.remove("hidden");
+                    } else {
+                        header.className = header.className.replace(" hidden", "");
+                    }
+                    lastScrollTop = 0;
+                }
+                if (Math.abs(currentScroll - lastScrollTop) >= threshold) {
+                    if (currentScroll > lastScrollTop) {
+                        if (header.classList) {
+                            header.classList.add("hidden");
+                        } else {
+                            header.className += " hidden";
+                        }
+                    } else {
+                        if (header.classList) {
+                            header.classList.remove("hidden");
+                        } else {
+                            header.className = header.className.replace(" hidden", "");
+                        }
+                    }
+                    lastScrollTop = currentScroll;
+                }
+            }, 50);
+            window.addEventListener("scroll", handleScroll);
+        }
+    </script>
 </head>
+
 <body dir="ltr">
     <div id="reactRoot">
         <div class="splashLogo"></div>
     </div>
 </body>
+
 </html>
