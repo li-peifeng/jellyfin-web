@@ -1292,7 +1292,6 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .MuiListItem-root,
 .MuiListItem-gutters {
     color: #ffffff;
-    padding-top: 0.6em;
 }
 
 /* 后台左侧面板已选择项 */
@@ -1349,6 +1348,11 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .MuiAvatar-circular {
     border-radius: 0.5em !important;
     background-color: #ffffff;
+}
+
+.MuiAvatar-root.MuiAvatar-circular.MuiAvatar-colorDefault {
+    background-color: #757575;
+    background-color: #00a4dc;
 }
 
 .MuiAvatar-root:hover,
