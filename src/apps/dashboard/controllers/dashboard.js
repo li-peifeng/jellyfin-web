@@ -712,34 +712,37 @@ const DashboardPage = {
             pollForInfo(page, ApiClient);
         });
     },
-    restart: function (btn) {
+    restart: function (event) {
         confirm({
             title: globalize.translate('Restart'),
             text: globalize.translate('MessageConfirmRestart'),
             confirmText: globalize.translate('Restart'),
             primary: 'delete'
-        }).then(function () {
-            const page = dom.parentWithClass(btn, 'page');
+        }).then(() => {
+            const page = dom.parentWithClass(event.target, 'page');
             page.querySelector('#btnRestartServer').disabled = true;
             page.querySelector('#btnShutdown').disabled = true;
             ApiClient.restartServer();
+        }).catch(() => {
+            // Confirm dialog closed
         });
     },
-    shutdown: function (btn) {
+    shutdown: function (event) {
         confirm({
             title: globalize.translate('ButtonShutdown'),
             text: globalize.translate('MessageConfirmShutdown'),
             confirmText: globalize.translate('ButtonShutdown'),
             primary: 'delete'
-        }).then(function () {
-            const page = dom.parentWithClass(btn, 'page');
+        }).then(() => {
+            const page = dom.parentWithClass(event.target, 'page');
             page.querySelector('#btnRestartServer').disabled = true;
             page.querySelector('#btnShutdown').disabled = true;
             ApiClient.shutdownServer();
+        }).catch(() => {
+            // Confirm dialog closed
         });
     }
 };
-window.DashboardPage = DashboardPage;
 
 export default function (view) {
     function onRestartRequired(evt, apiClient) {
@@ -816,7 +819,11 @@ export default function (view) {
             taskKey: 'RefreshLibrary',
             button: page.querySelector('.btnRefresh')
         });
+
+        page.querySelector('#btnRestartServer').addEventListener('click', DashboardPage.restart);
+        page.querySelector('#btnShutdown').addEventListener('click', DashboardPage.shutdown);
     });
+
     view.addEventListener('viewbeforehide', function () {
         const apiClient = ApiClient;
         const page = this;
@@ -838,6 +845,9 @@ export default function (view) {
             taskKey: 'RefreshLibrary',
             button: page.querySelector('.btnRefresh')
         });
+
+        page.querySelector('#btnRestartServer').removeEventListener('click', DashboardPage.restart);
+        page.querySelector('#btnShutdown').removeEventListener('click', DashboardPage.shutdown);
     });
     view.addEventListener('viewdestroy', function () {
         const page = this;
