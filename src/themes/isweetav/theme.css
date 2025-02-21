@@ -64,6 +64,7 @@ h3 {
 }
 
 progress {
+    width: 75%;
     appearance: none;
     margin: 0;
     background: #ffffff !important;
