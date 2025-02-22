@@ -445,20 +445,21 @@ a[data-role=button] {
     background: #00b400;
 }
 
-.emby-tab-button {
-    color: #ffffffe6;
-    border-radius: 2em;
-    line-height: 2em;
-    margin: 1em 0.6em;
-    min-width: 6em;
-    padding: 0em 0em;
-    box-shadow: 0 0 5px #ffffff;
-}
-
-.emby-tab-button-active {
+.emby-tab-button.emby-button.emby-tab-button-active {
+    margin: 1em 0.8em;
     min-width: 8em;
     color: #000000 !important;
     background-color: #ffffff;
+    box-shadow: 0 0 5px #ffffff;
+}
+
+.emby-tab-button.emby-button {
+    color: #ffffffe6;
+    border-radius: 2em;
+    line-height: 2em;
+    margin: 1em 0.8em;
+    min-width: 6em;
+    padding: 0em 0em;
     box-shadow: 0 0 5px #ffffff;
 }
 
