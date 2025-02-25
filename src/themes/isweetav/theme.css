@@ -189,8 +189,8 @@ a[data-role=button] {
 
 .visualCardBox {
     background: #ffffff4d;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .formDialogHeader {
@@ -205,9 +205,9 @@ a[data-role=button] {
     border-radius: var(--rounding) !important;
     background-color: #0000004d;
     box-shadow: 0 0 10px #ffffff;
-    -webkit-backdrop-filter: blur(10px) !important;
-    -o-backdrop-filter: blur(10px) !important;
-    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    -o-backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(5px) !important;
     -moz-backdrop-filterss: blur(10px) !important;
 }
 
@@ -301,7 +301,7 @@ a[data-role=button] {
 @supports (backdrop-filter:blur(10px)) or (-webkit-backdrop-filter:blur(10px)) {
     .appfooter {
         background: #00000033;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
     }
 }
 
@@ -871,9 +871,9 @@ form {
 .nowPlayingContextMenu {
     border-radius: var(--rounding) !important;
     background-color: #ffffff1a;
-    -webkit-backdrop-filter: blur(10px) !important;
-    -o-backdrop-filter: blur(10px) !important;
-    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    -o-backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(5px) !important;
     -moz-backdrop-filterss: blur(15px) !important;
 }
 
@@ -942,8 +942,8 @@ a.listItem-border {
     border-radius: var(--rounding) !important;
     background: #0000004d;
     transition: background 0.15s ease-out, box-shadow 0.15s ease-out;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .paper-icon-button-light>.material-icons {
@@ -1171,8 +1171,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     -ms-transition: background 0.15s ease-in-out;
     -o-transition: background 0.15s ease-in-out;
     transition: background 0.15s ease-in-out;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .dashboardDocument .metadataEditorPage {
@@ -1205,16 +1205,16 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     -ms-transition: all 0.2s !important;
     -o-transition: all 0.2s !important;
     transition: all 0.2s !important;
-    -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -o-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .upNextDialog {
     box-shadow: 0 0 5px #ffffff;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 /* Music Player */
@@ -1231,7 +1231,7 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 /* 背景模糊 */
 .backdropImage {
     -webkit-filter: blur(5px) saturate(110%) contrast(110%) brightness(90%);
-    filter: blur(5px) saturate(110%) contrast(110%) brightness(80%);
+    filter: blur(5px) saturate(110%) contrast(110%) brightness(90%);
 }
 
 .backgroundContainer.withBackdrop {
@@ -1249,7 +1249,7 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .detailPageSecondaryContainer {
     padding-top: 0em !important;
     -webkit-backdrop-filter: blur(5px) saturate(110%) contrast(110%) brightness(90%);
-    backdrop-filter: blur(5px) saturate(110%) contrast(110%) brightness(80%);
+    backdrop-filter: blur(5px) saturate(110%) contrast(110%) brightness(90%);
 }
 
 /* 登录页面背景图 */
@@ -1297,8 +1297,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     background: #0000004d;
     background-image: unset;
     box-shadow: unset;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .MuiListItemText-primary,
@@ -1399,8 +1399,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     background-image: none;
     width: 100%;
     padding: 0.3em 0;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .MuiPaper-rounded,
@@ -1408,8 +1408,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     overflow: hidden !important;
     width: 100% !important;
     background: none;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     box-shadow: 0 0 5px;
 }
 
@@ -1430,8 +1430,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .serverInfo {
     border-radius: var(--rounding);
     background: #ffffff4d;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 /* 后台服务器活动栏 */
@@ -1439,8 +1439,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .activityLogListWidget {
     border-radius: var(--rounding);
     background: #0000004d;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .paperList {
@@ -1459,8 +1459,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     color: #ffffff;
     background: #0000004d;
     background-image: unset;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     padding: 0 0.6em;
 }
 
