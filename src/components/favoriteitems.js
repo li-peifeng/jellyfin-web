@@ -141,7 +141,6 @@ function loadSection(elem, userId, topParentId, section, isSingleSection) {
                 html += '<h2 class="sectionTitle sectionTitle-cards">';
                 html += globalize.translate(section.name);
                 html += '</h2>';
-                html += '<span class="material-icons chevron_right" aria-hidden="true"></span>';
                 html += '</a>';
             } else {
                 html += '<h2 class="sectionTitle sectionTitle-cards">' + globalize.translate(section.name) + '</h2>';

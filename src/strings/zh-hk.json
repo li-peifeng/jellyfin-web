@@ -480,7 +480,7 @@
     "List": "清單",
     "LeaveBlankToNotSetAPassword": "您可以將此欄位留空來將密碼設定為無。",
     "LearnHowYouCanContribute": "了解如何貢獻。",
-    "LatestFromLibrary": "最近新增至 {0}",
+    "LatestFromLibrary": "新{0}",
     "LastSeen": "最後活動 {0}",
     "Large": "大",
     "LanNetworksHelp": "在強制頻寬限制時，認作本地網路上的 IP 位址或 IP/子網域遮罩項目的逗號分隔清單。若設置此項，所有其它 IP 位址將被視作在外部網路上，並且將受到外部頻寬限制。如果保留為空，則只將伺服器的子網域遮罩作本地網路。",

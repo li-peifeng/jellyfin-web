@@ -101,7 +101,6 @@ function renderLatestSection(
         html += '<h2 class="sectionTitle sectionTitle-cards">';
         html += globalize.translate('LatestFromLibrary', escapeHtml(parent.Name));
         html += '</h2>';
-        html += '<span class="material-icons chevron_right" aria-hidden="true"></span>';
         html += '</a>';
     } else {
         html += '<h2 class="sectionTitle sectionTitle-cards">' + globalize.translate('LatestFromLibrary', escapeHtml(parent.Name)) + '</h2>';
