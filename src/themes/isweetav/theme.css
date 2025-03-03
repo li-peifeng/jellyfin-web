@@ -783,9 +783,9 @@ form {
 }
 
 .button-cancel:hover {
-    color: #ffffff !important;
-    background: #00c300 !important;
-    box-shadow: 0 0 5px #00c300;
+    color: #000000 !important;
+    background: #ffffff !important;
+    box-shadow: 0 0 5px #ffffff;
 }
 
 .button-delete {
