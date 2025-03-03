@@ -768,6 +768,7 @@ form {
 .mini,
 .btnManual,
 .button-submit,
+.button-cancel,
 .viewTabButton,
 .button-alt,
 .btnOption,
@@ -775,17 +776,6 @@ form {
 .raised {
     border-radius: var(--rounding);
     background: #13dae0bf;
-}
-
-.button-cancel {
-    color: #ffffff !important;
-    background: #00000080 !important;
-}
-
-.button-cancel:hover {
-    color: #000000 !important;
-    background: #ffffff !important;
-    box-shadow: 0 0 5px #ffffff;
 }
 
 .button-delete {
