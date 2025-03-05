@@ -6,6 +6,8 @@ export const ASYNC_ADMIN_ROUTES: AsyncRoute[] = [
     { path: 'branding', type: AppType.Dashboard },
     { path: 'devices2', page: 'devices', type: AppType.Dashboard },
     { path: 'keys', type: AppType.Dashboard },
+    { path: 'libraries/display', type: AppType.Dashboard },
+    { path: 'libraries/metadata', type: AppType.Dashboard },
     { path: 'logs', type: AppType.Dashboard },
     { path: 'logs/:file', page: 'logs/file', type: AppType.Dashboard },
     { path: 'playback/resume', type: AppType.Dashboard },

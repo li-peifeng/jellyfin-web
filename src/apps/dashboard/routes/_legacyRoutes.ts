@@ -45,25 +45,11 @@ export const LEGACY_ADMIN_ROUTES: LegacyRoute[] = [
             view: 'library.html'
         }
     }, {
-        path: 'libraries/display',
-        pageProps: {
-            appType: AppType.Dashboard,
-            controller: 'librarydisplay',
-            view: 'librarydisplay.html'
-        }
-    }, {
         path: 'playback/transcoding',
         pageProps: {
             appType: AppType.Dashboard,
             controller: 'encodingsettings',
             view: 'encodingsettings.html'
-        }
-    }, {
-        path: 'libraries/metadata',
-        pageProps: {
-            appType: AppType.Dashboard,
-            controller: 'metadataImages',
-            view: 'metadataimages.html'
         }
     }, {
         path: 'libraries/nfo',
