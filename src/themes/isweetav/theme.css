@@ -378,8 +378,8 @@ a[data-role=button] {
 }
 
 .mediaInfoText {
-    color: #f8f8fe;
-    background: #aaaabe33;
+    color: #ffffff;
+    background: #ff000080;
 }
 
 .emby-input:focus,
@@ -602,12 +602,6 @@ a[data-role=button] {
 
 .timeslotHeaders-desktop::-webkit-scrollbar {
     height: 0.7em;
-}
-
-.mediaInfoOfficialRating {
-    border: 0.09em solid #583fa0;
-    color: #0e0f2d;
-    background-color: #dbe6ff;
 }
 
 .metadataSidebarIcon {
