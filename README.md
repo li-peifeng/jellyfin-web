@@ -21,8 +21,7 @@ services:
     mem_limit: 4096M
     network_mode: host
 ```
-
-![截屏2025-03-06 18 50 17](https://github.com/user-attachments/assets/58a6b74e-28db-455c-a3f3-d897778cfa3c)
-![截屏2025-03-06 18 51 08](https://github.com/user-attachments/assets/9efd16f7-c24c-4550-ac36-6fffc0bc682f)
-![截屏2025-03-06 18 51 35](https://github.com/user-attachments/assets/98543051-8895-4706-a96e-0f80b11d6cb3)
-![截屏2025-03-06 18 51 54](https://github.com/user-attachments/assets/a609271b-e629-4029-a652-01bb64ba4a91)
+![截屏2025-03-06 18 50 17](https://github.com/user-attachments/assets/69539693-5fb5-4c77-8085-55ee4e20362e)
+![截屏2025-03-06 18 51 08](https://github.com/user-attachments/assets/51215d7d-fa62-4de2-84f0-a5e24830c91d)
+![截屏2025-03-06 18 51 35](https://github.com/user-attachments/assets/cd2665bf-3f8d-432b-b9b7-12710ddff92c)
+![截屏2025-03-06 18 51 54](https://github.com/user-attachments/assets/8b804e88-78a3-4de7-9a97-0c98c31474e2)
