@@ -52,13 +52,6 @@ export const LEGACY_ADMIN_ROUTES: LegacyRoute[] = [
             view: 'encodingsettings.html'
         }
     }, {
-        path: 'libraries/nfo',
-        pageProps: {
-            appType: AppType.Dashboard,
-            controller: 'metadatanfo',
-            view: 'metadatanfo.html'
-        }
-    }, {
         path: 'plugins/catalog',
         pageProps: {
             appType: AppType.Dashboard,
@@ -106,13 +99,6 @@ export const LEGACY_ADMIN_ROUTES: LegacyRoute[] = [
             appType: AppType.Dashboard,
             controller: 'plugins/installed/index',
             view: 'plugins/installed/index.html'
-        }
-    }, {
-        path: 'tasks/edit',
-        pageProps: {
-            appType: AppType.Dashboard,
-            controller: 'scheduledtasks/scheduledtask',
-            view: 'scheduledtasks/scheduledtask.html'
         }
     }
 ];
