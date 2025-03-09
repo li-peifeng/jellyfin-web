@@ -1,11 +1,12 @@
 {
-    "Sync": "Amtawi",
-    "Photos": "Tiwlafin",
-    "Movies": "Isura",
-    "Folders": "Ikaramen",
-    "Favorites": "Ismenyifen",
-    "Default": "Lexṣas",
-    "Collections": "Tigrummiwin",
-    "Channels": "Ibuda",
-    "Albums": "Iseɣraz"
+  "AddedNewMedia": "New Media Added to Library",
+  "Sync": "Amtawi",
+  "Photos": "Tiwlafin",
+  "Movies": "Isura",
+  "Folders": "Ikaramen",
+  "Favorites": "Ismenyifen",
+  "Default": "Lexṣas",
+  "Collections": "Tigrummiwin",
+  "Channels": "Ibuda",
+  "Albums": "Iseɣraz"
 }

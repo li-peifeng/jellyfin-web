@@ -119,7 +119,7 @@ function showNewItemNotification(item, apiClient) {
     }
 
     const notification = {
-        title: 'New ' + item.Type,
+        title: globalize.translate('AddedNewMedia'),
         body: body,
         vibrate: true,
         tag: 'newItem' + item.Id,
