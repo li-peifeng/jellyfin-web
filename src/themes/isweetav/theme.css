@@ -627,6 +627,10 @@ a[data-role=button] {
     padding-top: 10em !important;
 }
 
+.pageTitle {
+    height: 2.6em;
+}
+
 /* 登录页面 */
 #loginPage .readOnlyContent,
 #loginPage form {
