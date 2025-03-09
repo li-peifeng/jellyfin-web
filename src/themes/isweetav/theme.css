@@ -1,4 +1,4 @@
-/* start custom css by PeiFeng.Li v2.15 2025-02-15 */
+/* start custom css by PeiFeng.Li v2.25 2025-03-09 */
 :root {
     --rounding: 0.5em;
     --card-rounding: 0.5em 0.5em 0 0;
@@ -625,6 +625,11 @@ a[data-role=button] {
 /* 服务器登录页面添加适量上间距 */
 .standalonePage {
     padding-top: 10em !important;
+}
+
+.pageTitleWithLogo {
+    width: 2.5em;
+    height: 2.5em;
 }
 
 /* 登录页面 */
