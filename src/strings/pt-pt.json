@@ -1831,7 +1831,7 @@
   "ChannelResolutionFullHD": "Full HD",
   "ConfirmDeleteSeries": "A eliminação desta série elimina TODOS os {0} episódios do sistema de ficheiros e da tua biblioteca multimédia. Tens a certeza de que queres continuar?",
   "ConfirmDeleteLyrics": "A eliminação destas letras irá eliminá-las do sistema de ficheiros e da tua biblioteca multimédia. Tens a certeza de que queres continuar?",
-  "ErrorDeletingLyrics": "Ocorreu um erro ao eliminar as letras do servidor. Verifica se o Jellyfin tem acesso de escrita à pasta multimédia e tenta novamente.",
+  "ErrorDeletingLyrics": "Ocorreu um erro ao eliminar as letras do servidor. Verifica se o iSweetAV tem acesso de escrita à pasta multimédia e tenta novamente.",
   "HeaderDeleteLyrics": "Eliminar letras",
   "ViewLyrics": "Ver letras",
   "PlaybackError.MEDIA_DECODE_ERROR": "A reprodução falhou devido a um erro ao descodificar o conteúdo.",

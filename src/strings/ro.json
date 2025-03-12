@@ -1922,7 +1922,7 @@
   "HeaderNextVideo": "Următorul videoclip",
   "LabelAudioTagSettings": "Setări etichete audio",
   "AllowFmp4TranscodingContainerHelp": "Permiteți containerul de transcodare fMP4 pentru acest tuner pentru a activa conținutul HEVC și HDR. Nu toate tunerele sunt compatibile cu acest container. Dezactivați acest lucru dacă întâmpinați probleme de redare.",
-  "AllowStreamSharingHelp": "Permiteți Jellyfin să dubleze fluxul mpegts de la tuner și să partajeze acest flux duplicat clienților săi. Acest lucru este util atunci când tunerul are o limită totală de flux, dar poate cauza și probleme de redare.",
+  "AllowStreamSharingHelp": "Permiteți iSweetAV să dubleze fluxul mpegts de la tuner și să partajeze acest flux duplicat clienților săi. Acest lucru este util atunci când tunerul are o limită totală de flux, dar poate cauza și probleme de redare.",
   "HeaderEditPlaylist": "Editați lista de redare",
   "HeaderVideoAdvanced": "Video avansat",
   "LabelAllowStreamSharing": "Permite partajarea fluxului",

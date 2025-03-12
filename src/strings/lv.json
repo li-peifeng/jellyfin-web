@@ -1856,7 +1856,7 @@
   "PluginLoadConfigError": "Iegūstot spraudņa konfigurācijas lapas, radās kļūda.",
   "PluginLoadRepoError": "Iegūstot spraudņa informāciju no krātuves, radās kļūda.",
   "PluginUninstallError": "Atinstalējot spraudni, radās kļūda.",
-  "AllowStreamSharingHelp": "Atļaut Jellyfin duplicēt mpegts plūsmu no tūnera un izplatīt šo duplicēto straumi tās klientiem. Šis ir noderīgs, ja tūnerim ir noteikts plūsmu skaita limits, bet tas var arī radīt atskaņošanas problēmas.",
+  "AllowStreamSharingHelp": "Atļaut iSweetAV duplicēt mpegts plūsmu no tūnera un izplatīt šo duplicēto straumi tās klientiem. Šis ir noderīgs, ja tūnerim ir noteikts plūsmu skaita limits, bet tas var arī radīt atskaņošanas problēmas.",
   "AllowFmp4TranscodingContainerHelp": "Atļaut fMP4 transkodēšanu šim tūnerim lai iespējotu HEVC un HDR saturu. Ne visi tūneri ir savietojami ar šo konteineru. Atspējojiet šo, ja rodas problēmas ar atskaņošanu.",
   "DateModified": "Modificēšanas datums",
   "TypeOptionPluralBoxSet": "Komplekti",
