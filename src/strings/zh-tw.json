@@ -1,6 +1,8 @@
 {
   "Add": "新增",
   "AddedNewMedia": "媒體庫有新內容更新",
+  "HeaderPageNotFound": "找不到此頁面哦",
+  "PageNotFound": "這不是您正在尋找的頁面",
   "All": "全部",
   "AllowRemoteAccessHelp": "如果未勾選，所有遠端連線都將被阻擋。",
   "Browse": "瀏覽",

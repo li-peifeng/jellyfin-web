@@ -1,6 +1,7 @@
 {
   "Add": "新增",
   "AddedNewMedia": "媒體庫有新內容更新",
+  "PageNotFound": "這不是您正在尋找的頁面。",
   "ButtonAddScheduledTaskTrigger": "新增觸發條件",
   "ButtonAddUser": "新增用戶",
   "ButtonCancel": "取消",
@@ -820,6 +821,7 @@
   "HeaderPassword": "密碼",
   "HeaderParentalRatings": "家長指引",
   "HeaderOtherItems": "其他項目",
+  "HeaderPageNotFound": "找不到此頁面哦",
   "HeaderOnNow": "現正播放",
   "HeaderNextVideoPlayingInValue": "下條影片將在{0}後播放",
   "HeaderNextEpisodePlayingInValue": "下集將在{0}後播放",
