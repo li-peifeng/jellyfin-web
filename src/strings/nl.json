@@ -2010,6 +2010,6 @@
   "DisplayLoadError": "Er is een fout opgetreden bij het laden van de weergaveconfiguratiegegevens.",
   "MetadataImagesLoadError": "Laden van metadata-instellingen mislukt",
   "MetadataNfoLoadError": "Laden van metadata-NFO-instellingen mislukt",
-    "PageNotFound": "Dit is niet de pagina die je zoekt.",
-    "HeaderPageNotFound": "Pagina niet gevonden"
+  "PageNotFound": "Dit is niet de pagina die je zoekt.",
+  "HeaderPageNotFound": "Pagina niet gevonden"
 }
