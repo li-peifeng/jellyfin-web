@@ -64,7 +64,7 @@ h3 {
 }
 
 progress {
-    width: 75%;
+    width: 85%;
     appearance: none;
     margin: 0;
     background: #ffffff !important;
@@ -1730,4 +1730,21 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     }
 }
 
+@media (min-width:300px) {
+    progress {
+        width: 60%;
+    }
+}
+
+@media (min-width:402px) {
+    progress {
+        width: 73%;
+    }
+}
+
+@media (min-width:500px) {
+    progress {
+        width: 80%;
+    }
+}
 /* end custom css */
