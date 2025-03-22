@@ -3,7 +3,7 @@
     "description": "Sweet • Sexy • Secret",
     "lang": "en-US",
     "short_name": "iSweeTav",
-    "start_url": "index.html#/home.html",
+    "start_url": "index.html#/home",
     "theme_color": "#101010",
     "background_color": "#101010",
     "display": "standalone",
