@@ -56,11 +56,19 @@ h3 {
 }
 
 .pageTitleWithDefaultLogo {
+<<<<<<< HEAD
     background-image: url(https://tv.peifeng.li/web/assets/img/banner-light.png);
 }
 
 .layout-tv .pageTitleWithDefaultLogo {
     background-image: url(https://tv.peifeng.li/web/assets/img/icon-transparent.png);
+=======
+    background-image: url(/web/assets/img/banner-light.png);
+}
+
+.layout-tv .pageTitleWithDefaultLogo {
+    background-image: url(/web/assets/img/icon-transparent.png);
+>>>>>>> 2c665280f88163902d75fbca9700fa7e711ac70f
 }
 
 progress {
