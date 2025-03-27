@@ -2011,5 +2011,7 @@
     "MetadataImagesLoadError": "Laden van metadata-instellingen mislukt",
     "MetadataNfoLoadError": "Laden van metadata-NFO-instellingen mislukt",
     "PageNotFound": "Dit is niet de pagina die je zoekt.",
-    "HeaderPageNotFound": "Pagina niet gevonden"
+    "HeaderPageNotFound": "Pagina niet gevonden",
+    "SettingsPageLoadError": "Laden van instellingenpagina mislukt",
+    "RetryWithGlobalSearch": "Alles doorzoeken"
 }
