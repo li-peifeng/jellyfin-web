@@ -38,8 +38,6 @@ function setTheme(id) {
             }
 
             currentThemeId = info.id;
-
-            document.getElementById('themeColor').content = info.color;
         });
     });
 }
