@@ -23,11 +23,11 @@ const AdvancedDrawerSection = () => {
             }
         >
             <ListItem disablePadding>
-                <ListItemLink to='/dashboard/networking'>
+                <ListItemLink to='/dashboard/tasks'>
                     <ListItemIcon>
-                        <Lan />
+                        <Schedule />
                     </ListItemIcon>
-                    <ListItemText primary={globalize.translate('TabNetworking')} />
+                    <ListItemText primary={globalize.translate('TabScheduledTasks')} />
                 </ListItemLink>
             </ListItem>
             <ListItem disablePadding>
@@ -39,19 +39,19 @@ const AdvancedDrawerSection = () => {
                 </ListItemLink>
             </ListItem>
             <ListItem disablePadding>
+                <ListItemLink to='/dashboard/networking'>
+                    <ListItemIcon>
+                        <Lan />
+                    </ListItemIcon>
+                    <ListItemText primary={globalize.translate('TabNetworking')} />
+                </ListItemLink>
+            </ListItem>
+            <ListItem disablePadding>
                 <ListItemLink to='/dashboard/logs'>
                     <ListItemIcon>
                         <Article />
                     </ListItemIcon>
                     <ListItemText primary={globalize.translate('TabLogs')} />
-                </ListItemLink>
-            </ListItem>
-            <ListItem disablePadding>
-                <ListItemLink to='/dashboard/tasks'>
-                    <ListItemIcon>
-                        <Schedule />
-                    </ListItemIcon>
-                    <ListItemText primary={globalize.translate('TabScheduledTasks')} />
                 </ListItemLink>
             </ListItem>
         </List>
