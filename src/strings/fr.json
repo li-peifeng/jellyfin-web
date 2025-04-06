@@ -1470,8 +1470,8 @@
     "LabelSelectAudioChannels": "Canaux",
     "LabelAllowedAudioChannels": "Nombre maximal de canaux audio autorisés",
     "LabelOriginalMediaInfo": "Informations sur le média original",
-    "AspectRatioFill": "Remplir",
-    "AspectRatioCover": "Couvrir",
+    "AspectRatioFill": "Étirer",
+    "AspectRatioCover": "Zoom",
     "AllowHevcEncoding": "Autoriser l'encodage au format HEVC",
     "PreferFmp4HlsContainer": "Préférer le conteneur de média fMP4-HLS",
     "LabelSyncPlayInfo": "Informations SyncPlay",
@@ -2023,5 +2023,7 @@
     "ImageDeleteFailed": "Échec de la suppression de l'image",
     "ImageUploadCancelled": "Téléversement d'image annulé",
     "ImageUploadFailed": "Échec du téléversement de l'image",
-    "UploadCustomImage": "Téléversement une image personnalisée"
+    "UploadCustomImage": "Téléversement une image personnalisée",
+    "ReadInputAtNativeFramerateHelp": "Activer cette option peut résoudre certains problèmes, par exemple les flux en direct qui s'arrêtent prématurément.",
+    "ReadInputAtNativeFramerate": "Lire l'entrée à la fréquence d'images native"
 }
