@@ -1,4 +1,4 @@
-import icon from '@jellyfin/ux-web/icon-transparent.png';
+import icon from 'isweet-ux-web/icon-transparent.png';
 
 import { PluginType } from '../../types/plugin.ts';
 import { randomInt } from '../../utils/number.ts';
