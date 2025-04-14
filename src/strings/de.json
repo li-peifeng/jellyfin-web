@@ -1487,8 +1487,8 @@
     "LabelOriginalMediaInfo": "Originale Medieninformation",
     "Remuxing": "Remuxing",
     "LabelRemuxingInfo": "Remux-Information",
-    "AspectRatioCover": "Bedecken",
-    "AspectRatioFill": "Füllen",
+    "AspectRatioCover": "Ausfüllen",
+    "AspectRatioFill": "Strecken",
     "SyncPlayGroupDefaultTitle": "{0}'s Gruppe",
     "MessageSyncPlayIsDisabled": "Berechtigung erforderlich für die Nutzung von SyncPlay.",
     "LabelSyncPlayTimeSyncOffset": "Zeitversatz",
@@ -1654,7 +1654,7 @@
     "HomeVideosPhotos": "Heimvideos und -bilder",
     "Bold": "Fett",
     "LabelTextWeight": "Schriftstärke",
-    "EnableSplashScreen": "Aktiviere den Splash Screen",
+    "EnableSplashScreen": "Aktiviere das Splashscreen-Bild",
     "MediaInfoRpuPresentFlag": "Flag 'DV rpu' vorhanden",
     "MediaInfoDvLevel": "DV-Level",
     "MediaInfoDvProfile": "DV-Profil",
@@ -2026,5 +2026,6 @@
     "LimitSegmentLength": "Kürzere HLS-Segmente verwenden",
     "LimitSegmentLengthHelp": "Durch Aktivieren dieser Option kann verhindert werden, dass der HLS-Player während der Suche auf bestimmten Geräten, beispielsweise webOS-Fernsehern, hängen bleibt.",
     "ImageUploadCancelled": "Bild hochladen abgebrochen",
-    "ImageUploadFailed": "Bild hochladen fehlgeschlagen"
+    "ImageUploadFailed": "Bild hochladen fehlgeschlagen",
+    "ReadInputAtNativeFramerate": "Eingabe mit nativer Framerate lesen"
 }
