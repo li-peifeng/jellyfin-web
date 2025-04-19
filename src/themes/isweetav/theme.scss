@@ -1532,6 +1532,11 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     background: none;
 }
 
+.css-1h6ebsr-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-1h6ebsr-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+    color: #ffffff;
+}
+
 .MuiLink-underlineAlways {
     color: #ffffff !important;
     text-decoration: none !important;
