@@ -105,7 +105,7 @@
     "ColorTransfer": "Transferência de cor",
     "CommunityRating": "Avaliação da comunidade",
     "Composer": "Compositor",
-    "ConfigureDateAdded": "Configure como os metadados são determinados para 'Data adicionada' em \"Painel > Bibliotecas > Configurações de NFO\"",
+    "ConfigureDateAdded": "Configure como os metadados são determinados para 'Data adicionada' em \"Painel > Bibliotecas > Exibição\"",
     "ConfirmDeleteImage": "Excluir imagem?",
     "ConfirmDeleteItem": "Ao excluir este item, você o excluirá do sistema de arquivos e também da biblioteca de mídias. Deseja realmente continuar?",
     "ConfirmDeleteItems": "Ao excluir estes itens, você os excluirá do sistema de arquivos e de sua biblioteca de mídias. Deseja realmente continuar?",
@@ -1985,5 +1985,16 @@
     "LabelQsvDeviceHelp": "Especifique o dispositivo para Intel QSV em um sistema multi-GPU. No Linux, este é o nó de renderização, por exemplo, /dev/dri/renderD128. No Windows, este é o índice do dispositivo começando em 0. Deixe em branco, a menos que você saiba o que está fazendo.",
     "FallbackMaxStreamingBitrateHelp": "A taxa de bits máxima da transmissão é usada como alternativa quando o ffprobe não consegue determinar a taxa de bits do stream da fonte. Isso ajuda a evitar que os clientes solicitem uma taxa de bits de transcodificação excessivamente alta, o que pode causar falha no reprodutor e sobrecarregar o codificador.",
     "Anime": "Anime",
-    "MoviesAndShows": "Filmes e Séries"
+    "MoviesAndShows": "Filmes e Séries",
+    "LabelMediaSegmentProviders": "Provedores de segmento de mídia",
+    "HeaderNextEpisode": "Próximo episódio",
+    "HeaderNextVideo": "Próximo vídeo",
+    "MediaSegmentProvidersHelp": "Habilite e classifique seus provedores de segmentos de mídia preferidos em ordem de prioridade.",
+    "CustomSubtitleStylingHelp": "A personalização das legendas funcionará na maioria dos dispositivos, mas pode acarretar um custo adicional de desempenho.",
+    "CustomSplashScreenSize": "Imagens personalizadas devem ter uma proporção de 16x9 com um tamanho mínimo de 1920x1080.",
+    "DeleteCustomImage": "Excluir Imagem Personalizada",
+    "CopyLogSuccess": "Conteúdo do log copiado com sucesso.",
+    "AutoSubtitleStylingHelp": "Este modo alternará automaticamente entre os mecanismos de estilo de legenda nativo e personalizado com base no tipo do seu dispositivo.",
+    "Custom": "Personalizado",
+    "DeleteServerConfirmation": "Você tem certeza que deseja excluir este servidor?"
 }
