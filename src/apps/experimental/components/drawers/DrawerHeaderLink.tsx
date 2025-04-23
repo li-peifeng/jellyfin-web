@@ -13,11 +13,11 @@ const DrawerHeaderLink = () => {
 
     return (
         <ListItemLink to='/'>
-            <ListItemIcon sx={{ minWidth: 56 }}>
+            <ListItemIcon sx={{ minWidth: 64 }}>
                 <Box
                     component='img'
                     src={appIcon}
-                    sx={{ height: '2.5rem' }}
+                    sx={{ height: '3.5rem' }}
                 />
             </ListItemIcon>
             <ListItemText
