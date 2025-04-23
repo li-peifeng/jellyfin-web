@@ -1,4 +1,4 @@
-<a href="https://peifeng.li"><img width="184px" alt="logo" src="https://is.peifeng.li/logo.png"/></a>
+<p align="center"><a href="https://peifeng.li"><img width="184px" alt="logo" src="https://is.peifeng.li/logo.png"/></a></p>
 
 Jellyfin 前端修改
 
