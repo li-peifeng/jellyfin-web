@@ -86,7 +86,7 @@ const config = {
                 'config.json',
                 'robots.txt',
                 {
-                    from: 'touchicon*.png',
+                    from: '*.png',
                     context: path.resolve(__dirname, 'node_modules/isweet-ux-web/favicons'),
                     to: 'favicons'
                 },
