@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://peifeng.li"><img width="184px" alt="logo" src="https://is.peifeng.li/logo.png" />
+  <a href="https://peifeng.li"><img width="184px" alt="logo" src="https://li-peifeng.github.io/logo.png" />
   </a>
 </p>
 
