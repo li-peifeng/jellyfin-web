@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://peifeng.li"><img width="184px" alt="logo" src="https://cdn.jsdelivr.net/gh/li-peifeng/cdn/logo.png" />
+  <a href="https://peifeng.li"><img width="184px" alt="logo" src="https://cdn.jsdelivr.net/gh/li-peifeng/static/logo.png" />
   </a>
 </p>
 
@@ -26,7 +26,7 @@ services:
     mem_limit: 4096M
     network_mode: host
 ```
-![截屏2025-03-06 18 50 17](https://cdn.jsdelivr.net/gh/li-peifeng/cdn/jellyfin/img/jellyfin-1.webp)
-![截屏2025-03-06 18 51 08](https://cdn.jsdelivr.net/gh/li-peifeng/cdn/jellyfin/img/jellyfin-2.webp)
-![截屏2025-03-06 18 51 35](https://cdn.jsdelivr.net/gh/li-peifeng/cdn/jellyfin/img/jellyfin-3.webp)
-![截屏2025-03-06 18 51 54](https://cdn.jsdelivr.net/gh/li-peifeng/cdn/jellyfin/img/jellyfin-4.webp)
+![截屏2025-03-06 18 50 17](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-1.webp)
+![截屏2025-03-06 18 51 08](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-2.webp)
+![截屏2025-03-06 18 51 35](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-3.webp)
+![截屏2025-03-06 18 51 54](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-4.webp)
