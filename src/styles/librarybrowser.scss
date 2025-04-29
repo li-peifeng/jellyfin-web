@@ -186,6 +186,11 @@
 
 .pageTitleWithDefaultLogo {
     margin-top: 0;
+    background-image: url(isweet-ui/icon-transparent.png);
+}
+
+.layout-tv .pageTitleWithDefaultLogo {
+    background-image: url(isweet-ui/icon-transparent.png);
 }
 
 .headerLeft,

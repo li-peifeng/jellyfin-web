@@ -87,7 +87,7 @@ const config = {
                 'robots.txt',
                 {
                     from: '*.png',
-                    context: path.resolve(__dirname, 'node_modules/isweet-ux-web/favicons'),
+                    context: path.resolve(__dirname, 'node_modules/isweet-ui/favicons'),
                     to: 'favicons'
                 },
                 ...Assets.map(asset => {
