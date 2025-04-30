@@ -126,7 +126,7 @@ export default function () {
     }
 
     self.show = function () {
-        const icon = '/assets/img/icon-transparent.png';
+        const icon = 'assets/img/icon-transparent.png';
         import('./style.scss').then(() => {
             let elem = document.querySelector('.logoScreenSaver');
 

@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSystemInfo } from 'hooks/useSystemInfo';
 
-const icon = '/assets/img/icon-transparent.png';
+const icon = 'assets/img/icon-transparent.png';
 const ServerButton: FC = () => {
     const {
         data: systemInfo,
