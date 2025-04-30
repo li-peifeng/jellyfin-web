@@ -1,4 +1,3 @@
-import icon from 'isweet-ui/icon-transparent.png';
 
 import { PluginType } from '../../types/plugin.ts';
 import { randomInt } from '../../utils/number.ts';
@@ -127,6 +126,7 @@ export default function () {
     }
 
     self.show = function () {
+        const icon = '/assets/img/icon-transparent.png';
         import('./style.scss').then(() => {
             let elem = document.querySelector('.logoScreenSaver');
 
