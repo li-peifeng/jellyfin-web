@@ -5,8 +5,7 @@ import globalize from '../../lib/globalize';
 import { ServerConnections } from 'lib/jellyfin-apiclient';
 import { getItems } from '../../utils/jellyfin-apiclient/getItems.ts';
 
-import NotificationIcon from './notificationicon.png';
-
+const NotificationIcon = '/assets/img/notificationicon.png';
 function onOneDocumentClick() {
     document.removeEventListener('click', onOneDocumentClick);
     document.removeEventListener('keydown', onOneDocumentClick);
