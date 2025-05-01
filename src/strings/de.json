@@ -2028,5 +2028,6 @@
     "ImageUploadCancelled": "Bild hochladen abgebrochen",
     "ImageUploadFailed": "Bild hochladen fehlgeschlagen",
     "ReadInputAtNativeFramerate": "Eingabe mit nativer Framerate lesen",
-    "HeaderUpdateRequired": "Update erforderlich"
+    "HeaderUpdateRequired": "Update erforderlich",
+    "HeaderServerUnavailable": "Server nicht verfügbar"
 }
