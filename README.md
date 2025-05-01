@@ -26,7 +26,7 @@ services:
     mem_limit: 4096M
     network_mode: host
 ```
-![截屏2025-03-06 18 50 17](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-1.webp)
-![截屏2025-03-06 18 51 08](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-2.webp)
-![截屏2025-03-06 18 51 35](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-3.webp)
-![截屏2025-03-06 18 51 54](https://cdn.jsdelivr.net/gh/li-peifeng/static/jellyfin/img/jellyfin-4.webp)
+![jellyfin-4](https://github.com/user-attachments/assets/45e104dc-c368-4349-a0bb-dd0e8c74d2d9)
+![jellyfin-3](https://github.com/user-attachments/assets/e441e5f1-4542-4bbb-9711-c56e5fec75ef)
+![jellyfin-2](https://github.com/user-attachments/assets/f18c4847-537c-42ea-a227-13d7e0c7deae)
+![jellyfin-1](https://github.com/user-attachments/assets/401d7634-6e83-42b3-86c7-7caa09c03a53)
