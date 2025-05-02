@@ -1085,14 +1085,14 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 
 /* 图片背景 */
 .itemBackdrop {
-    height: 50vh !important;
     margin-top: 4.5rem;
-    background-position: center;
+    background-position: center !important;
 }
 
 .layout-mobile .itemBackdrop {
-    margin-top: 4.5rem;
-    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    height: 35.3vh;
 }
 
 .layout-tv .itemBackdrop {
@@ -1746,6 +1746,18 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 @media (min-width:500px) {
     progress {
         width: 80%;
+    }
+}
+
+@media (min-width: 744px) {
+    .layout-mobile .itemBackdrop {
+        height: 43.3vh;
+    }
+}
+
+@media (min-width: 1133px) {
+    .layout-mobile .itemBackdrop {
+        height: 50vh;
     }
 }
 /* end custom css */
