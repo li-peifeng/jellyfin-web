@@ -1086,13 +1086,7 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 /* 图片背景 */
 .itemBackdrop {
     margin-top: 4.5rem;
-    background-position: center !important;
-}
-
-.layout-mobile .itemBackdrop {
-    background-repeat: repeat;
-    background-size: contain;
-    height: 35.3vh;
+    background-position: top 20% right !important;
 }
 
 .layout-tv .itemBackdrop {
@@ -1103,25 +1097,21 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     margin-top: 1.45em;
 }
 
-/* start 影片LOGO */
+/* start 影片LOGO mobile */
 .detailLogo {
-    position: absolute;
-    top: 10vh;
-    right: 25vw;
-    width: 31vw;
-    height: 22vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    width: 36vw;
+    height: 27vh;
+    right: 15vw;
 }
 
 .layout-mobile,
 .layout-tv {
     .detailLogo {
-        top: 20%;
-        right: 25%;
+        width: 32vw;
+        height: 24vh;
+        right: 12vw;
+        top: 15vh;
         display: unset;
-        width: 30%;
     }
 }
 
@@ -1753,11 +1743,26 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
     .layout-mobile .itemBackdrop {
         height: 43.3vh;
     }
+
+    .layout-mobile .detailLogo {
+        height: 24vh;
+        right: 15vw;
+        top: 20vh;
+        width: 32vw;
+    }
 }
 
 @media (min-width: 1133px) {
     .layout-mobile .itemBackdrop {
         height: 50vh;
     }
+
+    .layout-mobile .detailLogo {
+        height: 24vh;
+        right: 18vw;
+        top: 25vh;
+        width: 32vw;
+    }
 }
+
 /* end custom css */
