@@ -384,11 +384,6 @@ a[data-role=button] {
     border-color: #ff8000;
 }
 
-.emby-checkbox:checked+span+.checkboxOutline {
-    border: 0.14em solid #48c3c8;
-    background-color: #030322;
-}
-
 .emby-checkbox:checked+span+.checkboxOutline>.checkboxIcon-checked {
     color: #ffffff;
 }
@@ -843,8 +838,9 @@ form {
 
 /* 勾选框 */
 .checkboxOutline {
-    border-color: #ffffff;
-    border-radius: var(--rounding);
+    width: 1.65em;
+    height: 1.65em;
+    border-radius: 0.3em;
 }
 
 .emby-checkbox:checked+span+.checkboxOutline {
