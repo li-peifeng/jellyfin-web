@@ -240,6 +240,11 @@ a[data-role=button] {
     padding: 0 0.6em;
 }
 
+.MuiButtonBase-root.MuiCheckbox-root.Mui-checked,
+.MuiButtonBase-root.MuiCheckbox-root.MuiCheckbox-indeterminate {
+    color: #fff;
+}
+
 .layout-tv .formDialogFooter:not(.formDialogFooter-clear) {
     background: #ffffff;
 }
@@ -1512,11 +1517,6 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 .MuiList-root,
 .MuiBox-root {
     background: none;
-}
-
-.css-1h6ebsr-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
-.css-1h6ebsr-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
-    color: #ffffff;
 }
 
 .MuiLink-underlineAlways {
