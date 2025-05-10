@@ -2024,5 +2024,6 @@
     "HeaderServerUnavailable": "Server utilgjengelig",
     "StreamCountExceedsLimit": "Antallet strømninger overskrider grensen",
     "ReadInputAtNativeFramerate": "Les inndata i opprinnelig bildefrekvens",
-    "HeaderUpdateRequired": "Oppdatering kreves"
+    "HeaderUpdateRequired": "Oppdatering kreves",
+    "ViewSettings": "Se instillinger"
 }

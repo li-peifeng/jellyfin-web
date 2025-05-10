@@ -1616,7 +1616,7 @@
     "SelectAll": "Tout sélectionner",
     "ButtonExitApp": "Quitter l'application",
     "Clip": "Clip",
-    "ThemeVideo": "Thème vidéo",
+    "ThemeVideo": "Générique",
     "ThemeSong": "Thème musical",
     "Sample": "Échantillon",
     "Scene": "Scène",
@@ -2029,5 +2029,6 @@
     "LimitSegmentLengthHelp": "L'activation de cette option peut aider à empêcher le lecteur HLS de se bloquer pendant la recherche sur certains appareils, comme les téléviseurs webOS.",
     "LimitSegmentLength": "Utiliser des segments HLS plus courts",
     "HeaderServerUnavailable": "Serveur Indisponible",
-    "HeaderUpdateRequired": "Mise à jour requise"
+    "HeaderUpdateRequired": "Mise à jour requise",
+    "ViewSettings": "Afficher les paramètres"
 }

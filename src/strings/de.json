@@ -2029,5 +2029,6 @@
     "ImageUploadFailed": "Bild hochladen fehlgeschlagen",
     "ReadInputAtNativeFramerate": "Eingabe mit nativer Framerate lesen",
     "HeaderUpdateRequired": "Update erforderlich",
-    "HeaderServerUnavailable": "Server nicht verfügbar"
+    "HeaderServerUnavailable": "Server nicht verfügbar",
+    "ViewSettings": "Einstellungen anzeigen"
 }

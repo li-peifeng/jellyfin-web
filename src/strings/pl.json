@@ -1149,8 +1149,8 @@
     "ValueTimeLimitSingleHour": "Limit czasu: 1 godzina",
     "ValueVideoCodec": "Kodek wideo: {0}",
     "Vertical": "Wertykalny",
-    "ViewAlbum": "Podgląd albumu",
-    "ViewPlaybackInfo": "Wyświetlaj informacje o odtwarzaniu",
+    "ViewAlbum": "Zobacz album",
+    "ViewPlaybackInfo": "Zobacz informacje o odtwarzaniu",
     "Watched": "Obejrzany",
     "Wednesday": "Środa",
     "WelcomeToProject": "Witaj w iSweeTav!",
@@ -2029,5 +2029,6 @@
     "LimitSegmentLength": "Użyj krótszych segmentów HLS",
     "LimitSegmentLengthHelp": "Włączenie tej opcji może pomóc zapobiec zawieszaniu się odtwarzacza HLS podczas wyszukiwania na niektórych urządzeniach, np. telewizorach z systemem webOS.",
     "HeaderUpdateRequired": "Wymagana aktualizacja",
-    "HeaderServerUnavailable": "Serwer niedostępny"
+    "HeaderServerUnavailable": "Serwer niedostępny",
+    "ViewSettings": "Zobacz ustawienia"
 }
