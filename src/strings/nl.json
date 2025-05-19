@@ -71,7 +71,7 @@
     "ButtonParentalControl": "Ouderlijk toezicht",
     "ButtonPause": "Pauzeren",
     "ButtonPreviousTrack": "Vorige nummer",
-    "ButtonQuickStartGuide": "Snelstartgids",
+    "ButtonQuickStartGuide": "Instelgids",
     "ButtonRefreshGuideData": "Gidsgegevens vernieuwen",
     "ButtonRemove": "Verwijderen",
     "ButtonRename": "Hernoemen",
@@ -1701,7 +1701,7 @@
     "SaveRecordingNFOHelp": "Metadata uit de EPG-vermeldingen naast media opslaan.",
     "SaveRecordingImages": "EPG-afbeeldingen opslaan",
     "HeaderDummyChapter": "Hoofdstukafbeeldingen",
-    "LabelDummyChapterDurationHelp": "De interval tussen dummy-hoofdstukken. Stel in op 0 om het genereren van dummy-hoofdstukken uit te zetten. Wijzigingen hebben geen invloed op bestaande dummy-hoofdstukken.",
+    "LabelDummyChapterDurationHelp": "De interval tussen dummy-hoofdstukken in seconden. Stel in op 0 om het genereren van dummy-hoofdstukken uit te zetten. Wijzigingen hebben geen invloed op bestaande dummy-hoofdstukken.",
     "ResolutionMatchSource": "Gelijk aan bron",
     "HeaderRecordingMetadataSaving": "Metadata opname",
     "SecondarySubtitles": "Secundaire ondertiteling",
@@ -2028,5 +2028,8 @@
     "LimitSegmentLength": "Kortere HLS-segmenten gebruiken",
     "LimitSegmentLengthHelp": "Het inschakelen van deze optie kan helpen voorkomen dat de HLS-speler vastloopt tijdens terug- en vooruitspoelen op bepaalde apparaten, zoals webOS-tv's.",
     "HeaderUpdateRequired": "Bijwerken vereist",
-    "HeaderServerUnavailable": "Server niet beschikbaar"
+    "HeaderServerUnavailable": "Server niet beschikbaar",
+    "MessageForgotPasswordPinReset": "Pincode hier invoeren om wachtwoordherstel te voltooien",
+    "DownloadManager": "Downloads",
+    "ViewSettings": "Weergave-instellingen"
 }

@@ -1695,7 +1695,7 @@
     "HeaderRecordingMetadataSaving": "Enregistrement des métadonnées",
     "SaveRecordingNFO": "Enregistrer les métadonnées du fournisseur dans le fichier NFO",
     "SaveRecordingImages": "Enregistrer les images des métadonnées du fournisseur",
-    "LabelDummyChapterDurationHelp": "Intervalle entre deux chapitres factices ou 0 pour désactiver la génération. Changer la valeur n’affectera pas les chapitres existants.",
+    "LabelDummyChapterDurationHelp": "Intervalle entre deux chapitres factices en seondes ou 0 pour désactiver la génération. Changer la valeur n’affectera pas les chapitres existants.",
     "LabelDummyChapterCount": "Limite",
     "LabelChapterImageResolution": "Résolution",
     "LabelChapterImageResolutionHelp": "La résolution d'image des chapitre factices. Changer la valeur n’affectera pas les chapitres existants.",
@@ -2030,5 +2030,7 @@
     "LimitSegmentLength": "Utiliser des segments HLS plus courts",
     "HeaderServerUnavailable": "Serveur Indisponible",
     "HeaderUpdateRequired": "Mise à jour requise",
-    "ViewSettings": "Afficher les paramètres"
+    "ViewSettings": "Afficher les paramètres",
+    "MessageForgotPasswordPinReset": "Entrez le PIN ici pour finaliser la réinitialisation du mot de passe",
+    "DownloadManager": "Téléchargement"
 }

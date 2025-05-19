@@ -1145,7 +1145,7 @@
     "LabelTonemappingParam": "Paramètre de tone-mapping",
     "LabelSkipForwardLength": "Temps de saut en avant",
     "LabelSortName": "Nom de tri",
-    "LabelDummyChapterDurationHelp": "L’intervalle entre les chapitres fictifs. Définir une valeur de 0 pour désactiver la génération de chapitres fictifs. Le changement de cette valeur n’aura aucun effet sur les chapitres fictifs existants.",
+    "LabelDummyChapterDurationHelp": "L’intervalle entre les chapitres fictifs en secondes. Définir une valeur de 0 pour désactiver la génération de chapitres fictifs. Le changement de cette valeur n’aura aucun effet sur les chapitres fictifs existants.",
     "LabelEnableLUFSScan": "Activer le scan LUFS",
     "LabelOriginalAspectRatio": "Format d’image original",
     "LabelPlayer": "Lecteur",
@@ -1974,5 +1974,7 @@
     "LimitSegmentLengthHelp": "L'activation de cette option peut aider à empêcher le lecteur HLS de se bloquer pendant la recherche sur certains appareils, comme les téléviseurs webOS.",
     "HeaderServerUnavailable": "Serveur Indisponible",
     "HeaderUpdateRequired": "Mise à jour requise",
-    "ViewSettings": "Afficher les paramètres"
+    "ViewSettings": "Afficher les paramètres",
+    "MessageForgotPasswordPinReset": "Entrez le NIP ici pour finaliser la réinitialisation du mot de passe",
+    "DownloadManager": "Téléchargement"
 }
