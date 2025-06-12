@@ -1,9 +1,8 @@
-import type { ColorSystemOptions, ThemeOptions } from '@mui/material/styles';
+import type { ThemeOptions } from '@mui/material/styles/createTheme';
 
 const LIST_ICON_WIDTH = 36;
 
-/** The default "Dark" color scheme. */
-export const DEFAULT_COLOR_SCHEME: ColorSystemOptions = {
+export const DEFAULT_THEME_OPTIONS: ThemeOptions = {
     palette: {
         mode: 'dark',
         primary: {
@@ -25,11 +24,7 @@ export const DEFAULT_COLOR_SCHEME: ColorSystemOptions = {
         error: {
             main: '#cb272a' // Red color
         }
-    }
-};
-
-/** The default customizations to the default MUI theme. */
-export const DEFAULT_THEME_OPTIONS: ThemeOptions = {
+    },
     typography: {
         fontFamily: '"Noto Sans", sans-serif',
         button: {

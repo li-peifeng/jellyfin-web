@@ -15,7 +15,7 @@
 progress {
     appearance: none;
     margin: 0;
-    background: #ccc !important;
+    background: #ffffff !important;
     border-radius: 0.2em;
     border: none;
 }
@@ -25,7 +25,7 @@ progress[role]::after {
 }
 
 progress::-webkit-progress-bar {
-    background: #ccc;
+    background: #ffffff;
 }
 
 progress::-moz-progress-bar {

@@ -748,7 +748,7 @@ function setDefaultTitle () {
         pageTitleElement.innerHTML = '';
     }
 
-    document.title = documentTitle;
+    document.title = 'iSweeTav';
 }
 
 function setTitle (title) {
@@ -774,7 +774,7 @@ function setTitle (title) {
         pageTitleElement.innerText = html || '';
     }
 
-    document.title = title || documentTitle;
+    document.title = title || 'iSweeTav';
 }
 
 function setTransparentMenu (transparent) {

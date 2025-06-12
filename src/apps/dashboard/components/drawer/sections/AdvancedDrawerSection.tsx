@@ -1,5 +1,4 @@
 import Article from '@mui/icons-material/Article';
-import Backup from '@mui/icons-material/Backup';
 import Lan from '@mui/icons-material/Lan';
 import Schedule from '@mui/icons-material/Schedule';
 import VpnKey from '@mui/icons-material/VpnKey';
@@ -24,11 +23,11 @@ const AdvancedDrawerSection = () => {
             }
         >
             <ListItem disablePadding>
-                <ListItemLink to='/dashboard/networking'>
+                <ListItemLink to='/dashboard/tasks'>
                     <ListItemIcon>
-                        <Lan />
+                        <Schedule />
                     </ListItemIcon>
-                    <ListItemText primary={globalize.translate('TabNetworking')} />
+                    <ListItemText primary={globalize.translate('TabScheduledTasks')} />
                 </ListItemLink>
             </ListItem>
             <ListItem disablePadding>
@@ -40,11 +39,11 @@ const AdvancedDrawerSection = () => {
                 </ListItemLink>
             </ListItem>
             <ListItem disablePadding>
-                <ListItemLink to='/dashboard/backups'>
+                <ListItemLink to='/dashboard/networking'>
                     <ListItemIcon>
-                        <Backup />
+                        <Lan />
                     </ListItemIcon>
-                    <ListItemText primary={globalize.translate('HeaderBackups')} />
+                    <ListItemText primary={globalize.translate('TabNetworking')} />
                 </ListItemLink>
             </ListItem>
             <ListItem disablePadding>
@@ -53,14 +52,6 @@ const AdvancedDrawerSection = () => {
                         <Article />
                     </ListItemIcon>
                     <ListItemText primary={globalize.translate('TabLogs')} />
-                </ListItemLink>
-            </ListItem>
-            <ListItem disablePadding>
-                <ListItemLink to='/dashboard/tasks'>
-                    <ListItemIcon>
-                        <Schedule />
-                    </ListItemIcon>
-                    <ListItemText primary={globalize.translate('TabScheduledTasks')} />
                 </ListItemLink>
             </ListItem>
         </List>

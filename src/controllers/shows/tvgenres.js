@@ -128,7 +128,7 @@ export default function (view, params, tabContent) {
                 });
             }
             if (result.Items.length >= query.Limit) {
-                tabContent.querySelector('.btnMoreFromGenre' + id + ' .material-icons').classList.remove('hide');
+                tabContent.querySelector('.btnMoreFromGenre' + id).classList.remove('hide');
             }
         });
     }
@@ -150,7 +150,6 @@ export default function (view, params, tabContent) {
                 html += '<h2 class="sectionTitle sectionTitle-cards">';
                 html += escapeHtml(item.Name);
                 html += '</h2>';
-                html += '<span class="material-icons hide chevron_right" aria-hidden="true"></span>';
                 html += '</a>';
                 html += '</div>';
                 if (enableScrollX()) {

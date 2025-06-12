@@ -125,7 +125,6 @@ function buildSection(
         html += '<h2 class="sectionTitle sectionTitle-cards">';
         html += globalize.translate('HeaderOnNow');
         html += '</h2>';
-        html += '<span class="material-icons chevron_right" aria-hidden="true"></span>';
         html += '</a>';
     } else {
         html += '<h2 class="sectionTitle sectionTitle-cards">' + globalize.translate('HeaderOnNow') + '</h2>';

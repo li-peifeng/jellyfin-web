@@ -1,4 +1,3 @@
-import parseISO from 'date-fns/parseISO';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import type { ActivityLogEntry } from '@jellyfin/sdk/lib/generated-client/models/activity-log-entry';
 import { LogLevel } from '@jellyfin/sdk/lib/generated-client/models/log-level';
@@ -7,8 +6,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { type MRT_ColumnDef, useMaterialReactTable } from 'material-react-table';
 import { useSearchParams } from 'react-router-dom';
 
-import DateTimeCell from 'apps/dashboard/components/table/DateTimeCell';
-import TablePage, { DEFAULT_TABLE_OPTIONS } from 'apps/dashboard/components/table/TablePage';
+import TablePage, { DEFAULT_TABLE_OPTIONS } from 'apps/dashboard/components/TablePage';
 import { useLogEntries } from 'apps/dashboard/features/activity/api/useLogEntries';
 import ActionsCell from 'apps/dashboard/features/activity/components/ActionsCell';
 import LogLevelCell from 'apps/dashboard/features/activity/components/LogLevelCell';
@@ -16,6 +14,7 @@ import OverviewCell from 'apps/dashboard/features/activity/components/OverviewCe
 import UserAvatarButton from 'apps/dashboard/components/UserAvatarButton';
 import type { ActivityLogEntryCell } from 'apps/dashboard/features/activity/types/ActivityLogEntryCell';
 import { type UsersRecords, useUsersDetails } from 'hooks/useUsers';
+import { parseISO8601Date, toLocaleString } from 'scripts/datetime';
 import globalize from 'lib/globalize';
 import { toBoolean } from 'utils/string';
 
@@ -40,7 +39,7 @@ const getUserCell = (users: UsersRecords) => function UserCell({ row }: Activity
     );
 };
 
-export const Component = () => {
+const Activity = () => {
     const [ searchParams, setSearchParams ] = useSearchParams();
 
     const [ activityView, setActivityView ] = useState(
@@ -61,13 +60,7 @@ export const Component = () => {
         hasUserId: activityView !== ActivityView.All ? activityView === ActivityView.User : undefined
     }), [activityView, pagination.pageIndex, pagination.pageSize]);
 
-    const { data, isLoading: isLogEntriesLoading } = useLogEntries(activityParams);
-    const logEntries = useMemo(() => (
-        data?.Items || []
-    ), [ data ]);
-    const rowCount = useMemo(() => (
-        data?.TotalRecordCount || 0
-    ), [ data ]);
+    const { data: logEntries, isLoading: isLogEntriesLoading } = useLogEntries(activityParams);
 
     const isLoading = isUsersLoading || isLogEntriesLoading;
 
@@ -89,10 +82,10 @@ export const Component = () => {
     const columns = useMemo<MRT_ColumnDef<ActivityLogEntry>[]>(() => [
         {
             id: 'Date',
-            accessorFn: row => row.Date ? parseISO(row.Date) : undefined,
+            accessorFn: row => parseISO8601Date(row.Date),
             header: globalize.translate('LabelTime'),
             size: 160,
-            Cell: DateTimeCell,
+            Cell: ({ cell }) => toLocaleString(cell.getValue<Date>()),
             filterVariant: 'datetime-range'
         },
         {
@@ -160,7 +153,7 @@ export const Component = () => {
         ...DEFAULT_TABLE_OPTIONS,
 
         columns,
-        data: logEntries,
+        data: logEntries?.Items || [],
 
         // State
         initialState: {
@@ -174,7 +167,7 @@ export const Component = () => {
         // Server pagination
         manualPagination: true,
         onPaginationChange: setPagination,
-        rowCount,
+        rowCount: logEntries?.TotalRecordCount || 0,
 
         // Custom toolbar contents
         renderTopToolbarCustomActions: () => (
@@ -207,4 +200,4 @@ export const Component = () => {
     );
 };
 
-Component.displayName = 'ActivityPage';
+export default Activity;

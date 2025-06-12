@@ -18,7 +18,7 @@
     animation: fadein 0.5s;
     width: 30%;
     height: 30%;
-    background-image: url(@jellyfin/ux-web/icon-transparent.png);
+    background-image: url(../assets/img/icon-transparent.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -28,10 +28,15 @@
     transform: translate(-50%, -50%);
 }
 
-@media screen
-    and (min-device-width: 992px) {
+@media screen and (min-device-width: 992px) {
     .splashLogo {
-        background-image: url(@jellyfin/ux-web/banner-light.png);
+        background-image: url(../assets/img/banner-light.png);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .splashLogo {
+            background-image: url(../assets/img/banner-dark.png);
+        }
     }
 }
 

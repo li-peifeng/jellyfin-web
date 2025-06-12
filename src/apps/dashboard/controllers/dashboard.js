@@ -1,6 +1,4 @@
 import escapeHtml from 'escape-html';
-
-import ServerPathWidget from 'apps/dashboard/components/widgets/ServerPathWidget';
 import ActivityLog from 'components/activitylog';
 import alert from 'components/alert';
 import cardBuilder from 'components/cardbuilder/cardBuilder';
@@ -378,7 +376,7 @@ function renderRunningTasks(view, tasks) {
             html += '<progress max="100" value="' + progress + '" title="' + progress + '%">';
             html += progress + '%';
             html += '</progress>';
-            html += "<span style='color:#00a4dc;margin-left:5px;margin-right:5px;'>" + progress + '%</span>';
+            html += "<span style='color:#fff;margin-left:5px;margin-right:5px;'>" + progress + '%</span>';
             html += '<button type="button" is="paper-icon-button-light" title="' + globalize.translate('ButtonStop') + '" data-task-id="' + task.Id + '" class="autoSize btnTaskCancel"><span class="material-icons cancel" aria-hidden="true"></span></button>';
         } else if (task.State === 'Cancelling') {
             html += '<span style="color:#cc0000;">' + globalize.translate('LabelStopping') + '</span>';
@@ -483,8 +481,6 @@ const DashboardPage = {
     getNowPlayingName: function (session) {
         let imgUrl = '';
         const nowPlayingItem = session.NowPlayingItem;
-        // FIXME: It seems that, sometimes, server sends date in the future, so date-fns displays messages like 'in less than a minute'. We should fix
-        // how dates are returned by the server when the session is active and show something like 'Active now', instead of past/future sentences
         if (!nowPlayingItem) {
             return {
                 html: globalize.translate('LastSeen', formatDistanceToNow(Date.parse(session.LastActivityDate), getLocaleWithSuffix())),
@@ -826,7 +822,6 @@ export default function (view) {
         });
 
         unmountWidgetFns.push(renderComponent(ItemCountsWidget, {}, page.querySelector('#itemCounts')));
-        unmountWidgetFns.push(renderComponent(ServerPathWidget, {}, page.querySelector('#serverPaths')));
 
         page.querySelector('#btnRestartServer').addEventListener('click', DashboardPage.restart);
         page.querySelector('#btnShutdown').addEventListener('click', DashboardPage.shutdown);
@@ -877,4 +872,3 @@ export default function (view) {
         }
     });
 }
-

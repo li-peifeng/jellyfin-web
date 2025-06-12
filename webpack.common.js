@@ -85,11 +85,6 @@ const config = {
                 },
                 'config.json',
                 'robots.txt',
-                {
-                    from: 'touchicon*.png',
-                    context: path.resolve(__dirname, 'node_modules/@jellyfin/ux-web/favicons'),
-                    to: 'favicons'
-                },
                 ...Assets.map(asset => {
                     return {
                         from: path.resolve(__dirname, `node_modules/${asset}`),
@@ -241,23 +236,6 @@ const config = {
                     path.resolve(__dirname, 'node_modules/usehooks-ts'),
                     path.resolve(__dirname, 'src')
                 ],
-                use: [{
-                    loader: 'babel-loader',
-                    options: {
-                        cacheCompression: false,
-                        cacheDirectory: true
-                    }
-                }]
-            },
-            // Strict EcmaScript modules require additional flags
-            {
-                test: /\.(js|jsx|mjs)$/,
-                include: [
-                    path.resolve(__dirname, 'node_modules/@tanstack/query-devtools')
-                ],
-                resolve: {
-                    fullySpecified: false
-                },
                 use: [{
                     loader: 'babel-loader',
                     options: {

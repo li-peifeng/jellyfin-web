@@ -268,7 +268,6 @@ function createSections(instance, elem, apiClient) {
             html += '<h2 class="sectionTitle sectionTitle-cards">';
             html += globalize.translate(section.name);
             html += '</h2>';
-            html += '<span class="material-icons chevron_right" aria-hidden="true"></span>';
             html += '</a>';
         }
 
