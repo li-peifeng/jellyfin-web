@@ -1202,8 +1202,8 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 
 /* 背景模糊 */
 .backdropImage {
-    -webkit-filter: blur(5px) saturate(110%) contrast(90%) brightness(90%);
-    filter: blur(5px) saturate(110%) contrast(90%) brightness(90%);
+    -webkit-filter: blur(5px) saturate(110%) contrast(95%) brightness(95%);
+    filter: blur(5px) saturate(110%) contrast(95%) brightness(95%);
 }
 
 .backgroundContainer.withBackdrop {
@@ -1213,15 +1213,15 @@ span.material-icons.detailButton-icon.favorite.ratingbutton-icon-withrating {
 /* 影片详情页标题栏透明模糊 */
 .detailRibbon {
     background: rgba(0, 0, 0, 0.25);
-    -webkit-backdrop-filter: blur(5px) saturate(110%) contrast(90%) brightness(90%);
-    backdrop-filter: blur(5px) saturate(110%) contrast(90%) brightness(90%);
+    -webkit-backdrop-filter: blur(5px) saturate(110%) contrast(95%) brightness(95%);
+    backdrop-filter: blur(5px) saturate(110%) contrast(95%) brightness(95%);
 }
 
 /* 影片详情页透明模糊 */
 .detailPageSecondaryContainer {
     padding-top: 0em !important;
-    -webkit-backdrop-filter: blur(5px) saturate(110%) contrast(90%) brightness(90%);
-    backdrop-filter: blur(5px) saturate(110%) contrast(90%) brightness(90%);
+    -webkit-backdrop-filter: blur(5px) saturate(110%) contrast(95%) brightness(95%);
+    backdrop-filter: blur(5px) saturate(110%) contrast(95%) brightness(95%);
 }
 
 /* 登录页面背景图 */
