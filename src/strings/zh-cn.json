@@ -754,7 +754,7 @@
     "MessageConfirmRemoveMediaLocation": "你确定要移除此位置？",
     "MessageConfirmRestart": "你确定要重启 iSweeTav？",
     "MessageConfirmRevokeApiKey": "你确定你希望撤销这个 API 秘钥吗？这个应用程序与本服务器的连接将会被立刻中断。",
-    "MessageConfirmShutdown": "你确定要关闭服务端？",
+    "MessageConfirmShutdown": "您确定要关闭服务器吗？",
     "MessageContactAdminToResetPassword": "请联系你的管理员以重置你的密码。",
     "MessageCreateAccountAt": "在 {0} 创建帐户",
     "MessageDeleteTaskTrigger": "你确定删除这个任务触发条件？",
@@ -2058,5 +2058,12 @@
     "StorageType.Ram": "内存盘",
     "StorageType.Unknown": "未知存储",
     "Success": "成功",
-    "HeaderBackups": "备份"
+    "HeaderBackups": "备份",
+    "DeleteRepositoryConfirmation": "你确定要删除此存储库吗？",
+    "ConfirmDeleteRepository": "删除存储库？",
+    "RepositoriesPageLoadError": "加载存储库失败",
+    "TranscodingLoadError": "加载转码设置失败",
+    "PluginsLoadError": "加载插件时发生错误。",
+    "ButtonLearnMore": "了解更多",
+    "LiveTVPageLoadError": "无法加载录制页面"
 }
