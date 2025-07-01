@@ -1,5 +1,4 @@
 {
-    "AddedNewMedia": "New Media Added to Library",
     "Absolute": "絶対",
     "AccessRestrictedTryAgainLater": "アクセスは現在制限されています。後でもう一度やり直してください。",
     "Actor": "俳優",
@@ -1920,7 +1919,7 @@
     "PreviewLyrics": "歌詞をプレビュー",
     "SearchForLyrics": "歌詞を検索",
     "DateModified": "変更日付",
-    "AllowStreamSharingHelp": "iSweetAVがチューナーからのMPEGTSストリームを複製し、この複製されたストリームをクライアントに共有できるようにします。 これは、チューナーに総ストリーム数の制限がある場合に便利ですが、再生上の問題を引き起こす可能性もあります。",
+    "AllowStreamSharingHelp": "iSweeTavがチューナーからのMPEGTSストリームを複製し、この複製されたストリームをクライアントに共有できるようにします。 これは、チューナーに総ストリーム数の制限がある場合に便利ですが、再生上の問題を引き起こす可能性もあります。",
     "AllowFmp4TranscodingContainerHelp": "このチューナーのfMP4トランスコードコンテナを許可して、HEVCとHDRコンテンツを有効にします。 すべてのチューナーがこのコンテナに対応しているわけではありません。 再生に問題がある場合は無効にしてください。",
     "AutoSubtitleStylingHelp": "このモードではデバイスの種類に応じて、ネイティブ字幕とカスタム字幕のスタイリングメカニズムが自動的に切り替わります。",
     "CustomSubtitleStylingHelp": "字幕のスタイリングはほとんどのデバイスで機能しますが、パフォーマンス上のオーバーヘッドが増加します。",
