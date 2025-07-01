@@ -5,11 +5,6 @@
 
 Jellyfin 前端修改
 
-## 在线使用
-可直接在线使用，打开地址后输入你的 Jellyfin IP 连接到你的 Jellyfin.
-
-[在线使用](https://isweetav.pages.dev/)
-
 ## 安装
 Docker 部署映射整个 Jellyfin-Web 文件夹
 
